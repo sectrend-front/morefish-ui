@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import path from 'path'
+import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 
@@ -7,11 +7,29 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 export default defineConfig({
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src')
+      '@': resolve(__dirname, 'src')
     }
   },
   plugins: [vue(), vueJsx({})],
+  server: {
+    hmr: true
+  },
   define: {
     __VUE_OPTIONS_API__: false
+  },
+  build: {
+    lib: {
+      entry: resolve(__dirname, 'src/components/index.ts'),
+      name: 'Morefish',
+      fileName: (format) => `morefish.${format}.js`
+    },
+    rollupOptions: {
+      external: ['vue'],
+      output: {
+        globals: {
+          vue: 'Vue'
+        }
+      }
+    }
   }
 })
