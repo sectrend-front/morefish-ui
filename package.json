@@ -25,7 +25,7 @@
     ],
     "scripts": {
         "dev": "vite",
-        "build": "rm -rf dist && vue-tsc --noEmit && vite build",
+        "build": "zx script/build.mjs",
         "preview": "vite preview",
         "prettier": "prettier --write ."
     },
