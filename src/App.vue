@@ -1,7 +1,7 @@
 <script setup lang="ts">
-// import { MfButton } from '@/components'
-
-import { MfButton } from 'morefish-ui'
+import { MfButton } from '@/components'
+// import { MfButton } from 'morefish-ui'
+import HelloWorld from './template/HelloWorld.vue'
 </script>
 
 <template>
@@ -14,8 +14,9 @@ import { MfButton } from 'morefish-ui'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
     <section>
-      <mf-button>zaaaz222z22123</mf-button>
+      <mf-button type="primary">test</mf-button>
     </section>
+    <HelloWorld/>
   </div>
 </template>
 

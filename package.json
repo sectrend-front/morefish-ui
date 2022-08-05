@@ -30,6 +30,7 @@
         "prettier": "prettier --write ."
     },
     "dependencies": {
+        "@vueuse/core": "^9.1.0",
         "dayjs": "^1.11.4",
         "morefish-ui": "^0.0.1",
         "vue": "^3.2.37"

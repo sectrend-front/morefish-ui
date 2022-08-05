@@ -1,10 +1,16 @@
 import { defineComponent } from 'vue'
 import './Button.less'
-import { TagPrefixName } from '@/const/config'
 
 export default defineComponent({
+  props: {
+    type: String
+  },
   setup(props, { slots }) {
-    console.log(props)
-    return () => <button class={`${TagPrefixName}-button`}>{slots.default && slots.default()}</button>
+    console.log(props.type)
+    console.log(233)
+    return () =>
+      <>
+        <button class='mf-button'>{slots.default && slots.default()}</button>
+      </>
   }
 })
