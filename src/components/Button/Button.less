@@ -1,7 +1,52 @@
+@fontSize: 14px;
+@btnHeight: 32px;
+
 .mf-button {
-  color: red;
+  height: @btnHeight;
+  padding: 0px 16px;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  font-size: @fontSize;
+  border: none;
+  border-radius: 4px;
+  user-select: none;
+  cursor: pointer;
+  font-weight: 600;
+
+
 
   &-type-primary {
-    background-color: aqua;
+    background-color: #409eff;
   }
+
+  &-type-success {
+    background-color: #67c23a;
+  }
+
+  &-type-info {
+    background-color: #909399;
+  }
+
+  &-type-warning {
+    background-color: #e6a23c;
+  }
+
+  &-type-danger {
+    background-color: #f56c6c;
+  }
+
+  &-size-large {
+    height: @btnHeight * 1.25;
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  &-size-small {
+    height: (@btnHeight / 1.25);
+    font-size: 12px;
+    padding: 0 8px;
+  }
+
+
 }

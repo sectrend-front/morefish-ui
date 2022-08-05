@@ -14,9 +14,13 @@ import HelloWorld from './template/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
     <section>
-      <mf-button type="primary">test</mf-button>
+      <mf-button type="primary" round size="large">Primary 重要</mf-button>
+      <mf-button type="success" size="large">Success</mf-button>
+      <mf-button type="info" size="small">Info</mf-button>
+      <mf-button type="warning">Warning</mf-button>
+      <mf-button type="danger">危险</mf-button>
     </section>
-    <HelloWorld/>
+    <HelloWorld />
   </div>
 </template>
 
@@ -26,10 +30,16 @@ import HelloWorld from './template/HelloWorld.vue'
   padding: 1.5em;
   will-change: filter;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 10px #646cff);
 }
+
 .logo.vue:hover {
   filter: drop-shadow(0 0 1em #42b883aa);
+}
+
+section{
+  display: flex;
 }
 </style>

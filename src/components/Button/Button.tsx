@@ -1,20 +1,34 @@
 import { defineComponent } from 'vue'
+import { Types, Name, Sizes } from './const'
 import './Button.less'
-
-const ButtonType = ['primary', 'success', 'info', 'warning', 'danger']
 
 export default defineComponent({
   props: {
-    type: String
+    type: String,
+    round: Boolean,
+    plain: Boolean,
+    size: {
+      default: 'default',
+      type: String
+    }
   },
-  setup(props, { slots }) {
-    console.log(props.type)
-    console.log(233)
+  emits: ['click'],
+  setup(props, { slots, emit }) {
+    const setStyle = () => {
+      let styleStr = ''
+      styleStr += `${Name} `
+      styleStr += props.type && Types.includes(props.type) ? `${Name}-type-${props.type} ` : ''
+      styleStr += Sizes.includes(props.size) ? `${Name}-size-${props.size} ` : ''
+      return styleStr
+    }
 
     return () =>
       <>
-        <button class={`mf-button ${props.type && ButtonType.includes(props.type) ? 'mf-button-type-' + props.type : ''}`}
-        >{slots.default && slots.default()}</button>
+        <button
+          class={setStyle()}
+          onClick={(evt: MouseEvent) => emit('click', evt)}>
+          <span class={`${Name}-span`}>{slots.default && slots.default()}</span>
+        </button>
       </>
   }
 })
