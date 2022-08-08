@@ -38,6 +38,7 @@
         "git-cz": "git add .&&git cz"
     },
     "dependencies": {
+        "@highlightjs/vue-plugin": "^2.1.0",
         "@vueuse/core": "^9.1.0",
         "dayjs": "^1.11.4",
         "morefish-ui": "^0.0.1",
@@ -62,6 +63,7 @@
         "eslint-plugin-vue": "^9.3.0",
         "fp-ts": "^2.12.2",
         "happy-dom": "^6.0.4",
+        "highlight.js": "^11.6.0",
         "inferred-types": "^0.22.0",
         "less": "^4.1.3",
         "prettier": "^2.7.1",
