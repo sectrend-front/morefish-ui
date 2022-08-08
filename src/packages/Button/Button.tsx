@@ -16,9 +16,9 @@ export default defineComponent({
   setup(props, { slots, emit }) {
     const setStyle = () => {
       let styleStr = ''
-      styleStr += `${Name} `
-      styleStr += props.type && Types.includes(props.type) ? `${Name}-type-${props.type} ` : ''
-      styleStr += Sizes.includes(props.size) ? `${Name}-size-${props.size} ` : ''
+      styleStr += `${Name}`
+      styleStr += props.type && Types.includes(props.type) ? ` ${Name}-type-${props.type}` : ''
+      styleStr += Sizes.includes(props.size) ? ` ${Name}-size-${props.size}` : ''
       return styleStr
     }
 

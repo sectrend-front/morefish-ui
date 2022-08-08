@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { MfButton } from '@/components'
+import { MfButton } from '@/packages'
 // import { MfButton } from 'morefish-ui'
-import HelloWorld from './template/HelloWorld.vue'
 </script>
 
 <template>
@@ -20,7 +19,7 @@ import HelloWorld from './template/HelloWorld.vue'
       <mf-button type="warning">Warning</mf-button>
       <mf-button type="danger">危险</mf-button>
     </section>
-    <HelloWorld />
+    <router-view></router-view>
   </div>
 </template>
 
