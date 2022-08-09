@@ -12,6 +12,7 @@ module.exports = {
     },
     plugins: ['vue', '@typescript-eslint'],
     rules: {
-        'space-before-function-paren': 0
+        'space-before-function-paren': 0,
+        'vue/multi-word-component-names': 0
     }
 }
