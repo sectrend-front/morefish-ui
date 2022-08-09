@@ -1,149 +1,149 @@
 {
-    "name": "morefish-ui",
-    "version": "0.0.1",
-    "type": "module",
-    "main": "./dist/morefish.umd.js",
-    "module": "./dist/morefish.es.js",
-    "description": "morefish-ui",
-    "keywords": [
-        "vue",
-        "vue3",
-        "vuejs",
-        "vite",
-        "morefish-ui",
-        "ui",
-        "vueui",
-        "vue组件库",
-        "vue3组件库"
-    ],
-    "exports": {
-        ".": {
-            "import": "./dist/morefish.es.js",
-            "require": "./dist/morefish.umd.js"
-        },
-        "./dist/style.css": {
-            "import": "./dist/style.css",
-            "require": "./dist/style.css"
-        }
+  "name": "morefish-ui",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/morefish.umd.js",
+  "module": "./dist/morefish.es.js",
+  "description": "morefish-ui",
+  "keywords": [
+    "vue",
+    "vue3",
+    "vuejs",
+    "vite",
+    "morefish-ui",
+    "ui",
+    "vueui",
+    "vue组件库",
+    "vue3组件库"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/morefish.es.js",
+      "require": "./dist/morefish.umd.js"
     },
-    "files": [
-        "package.json",
-        "dist"
-    ],
-    "scripts": {
-        "dev": "vite",
-        "build": "zx script/build.mjs",
-        "preview": "vite preview",
-        "prettier": "prettier --write .",
-        "git-cz": "git add .&&git cz"
-    },
-    "dependencies": {
-        "@highlightjs/vue-plugin": "^2.1.0",
-        "@vueuse/core": "^9.1.0",
-        "dayjs": "^1.11.4",
-        "morefish-ui": "^0.0.1",
-        "vue": "^3.2.37",
-        "vue-router": "^4.1.3"
-    },
-    "devDependencies": {
-        "@rollup/pluginutils": "^4.2.1",
-        "@typescript-eslint/eslint-plugin": "^5.32.0",
-        "@typescript-eslint/parser": "^5.32.0",
-        "@vitejs/plugin-vue": "^3.0.0",
-        "@vitejs/plugin-vue-jsx": "^2.0.0",
-        "c8": "^7.12.0",
-        "commitizen": "^4.2.5",
-        "cz-conventional-changelog": "^3.3.0",
-        "cz-conventional-changelog-zh": "^0.0.2",
-        "eslint": "^8.0.1",
-        "eslint-config-standard": "^17.0.0",
-        "eslint-plugin-import": "^2.25.2",
-        "eslint-plugin-n": "^15.0.0",
-        "eslint-plugin-promise": "^6.0.0",
-        "eslint-plugin-vue": "^9.3.0",
-        "fp-ts": "^2.12.2",
-        "happy-dom": "^6.0.4",
-        "highlight.js": "^11.6.0",
-        "inferred-types": "^0.22.0",
-        "less": "^4.1.3",
-        "prettier": "^2.7.1",
-        "rollup": "^2.77.2",
-        "typescript": "^4.6.4",
-        "vite": "^3.0.0",
-        "vite-plugin-md": "^0.20.2",
-        "vitest": "^0.20.3",
-        "vue-tsc": "^0.38.4"
-    },
-    "homepage": "https://github.com/sectrend-front/morefish-ui",
-    "bugs": {
-        "email": "869135421@qq.com"
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog-zh",
-            "defaultType": "[新增功能]",
-            "types": {
-                "[新增功能]": {
-                    "description": "新增功能点、新增需求",
-                    "title": "Features"
-                },
-                "[Bug修复]": {
-                    "description": "修复Bug,线上，测试，验收阶段的bug",
-                    "title": "Bug Fixes"
-                },
-                "[文档修改]": {
-                    "description": "文档增删改",
-                    "title": "Documentation"
-                },
-                "[样式修改]": {
-                    "description": "样式修改(空白、格式、缺少分号等)",
-                    "title": "Styles"
-                },
-                "[代码重构]": {
-                    "description": "既不修复bug也不添加新功能的更改",
-                    "title": "Code Refactoring"
-                },
-                "[性能优化]": {
-                    "description": "性能优化",
-                    "title": "Performance Improvements"
-                },
-                "[测试代码]": {
-                    "description": "增加测试",
-                    "title": "Tests"
-                },
-                "[编译代码]": {
-                    "description": "影响构建系统或外部依赖项的更改(示例范围:gulp、broccoli、npm)",
-                    "title": "Builds"
-                },
-                "[持续集成]": {
-                    "description": "对CI配置文件和脚本的更改(示例范围:Travis, Circle, BrowserStack, SauceLabs)",
-                    "title": "Continuous Integrations"
-                },
-                "[其他提交]": {
-                    "description": "除src目录或测试文件以外的修改",
-                    "title": "Chores"
-                },
-                "[回退更改]": {
-                    "description": "回退历史版本",
-                    "title": "Reverts"
-                },
-                "[修改冲突]": {
-                    "description": "修改冲突",
-                    "title": "Conflict"
-                },
-                "[字体修改]": {
-                    "description": "字体文件更新",
-                    "title": "Fonts"
-                },
-                "[删除文件]": {
-                    "description": "删除文件",
-                    "title": "Delete Files"
-                },
-                "[暂存文件]": {
-                    "description": "暂存文件",
-                    "title": "Stash Files"
-                }
-            }
-        }
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
     }
+  },
+  "files": [
+    "package.json",
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "zx script/build.mjs",
+    "preview": "vite preview",
+    "prettier": "prettier --write .",
+    "git-cz": "git add .&&git cz"
+  },
+  "dependencies": {
+    "@highlightjs/vue-plugin": "^2.1.0",
+    "@vueuse/core": "^9.1.0",
+    "dayjs": "^1.11.4",
+    "morefish-ui": "^0.0.1",
+    "vue": "^3.2.37",
+    "vue-router": "^4.1.3"
+  },
+  "devDependencies": {
+    "@rollup/pluginutils": "^4.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "@vitejs/plugin-vue": "^3.0.0",
+    "@vitejs/plugin-vue-jsx": "^2.0.0",
+    "c8": "^7.12.0",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-conventional-changelog-zh": "^0.0.2",
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^9.3.0",
+    "fp-ts": "^2.12.2",
+    "happy-dom": "^6.0.4",
+    "highlight.js": "^11.6.0",
+    "inferred-types": "^0.22.0",
+    "less": "^4.1.3",
+    "prettier": "^2.7.1",
+    "rollup": "^2.77.2",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0",
+    "vite-plugin-md": "^0.20.2",
+    "vitest": "^0.20.3",
+    "vue-tsc": "^0.38.4"
+  },
+  "homepage": "https://github.com/sectrend-front/morefish-ui",
+  "bugs": {
+    "email": "869135421@qq.com"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog-zh",
+      "defaultType": "[新增功能]",
+      "types": {
+        "[新增功能]": {
+          "description": "新增功能点、新增需求",
+          "title": "Features"
+        },
+        "[Bug修复]": {
+          "description": "修复Bug,线上，测试，验收阶段的bug",
+          "title": "Bug Fixes"
+        },
+        "[文档修改]": {
+          "description": "文档增删改",
+          "title": "Documentation"
+        },
+        "[样式修改]": {
+          "description": "样式修改(空白、格式、缺少分号等)",
+          "title": "Styles"
+        },
+        "[代码重构]": {
+          "description": "既不修复bug也不添加新功能的更改",
+          "title": "Code Refactoring"
+        },
+        "[性能优化]": {
+          "description": "性能优化",
+          "title": "Performance Improvements"
+        },
+        "[测试代码]": {
+          "description": "增加测试",
+          "title": "Tests"
+        },
+        "[编译代码]": {
+          "description": "影响构建系统或外部依赖项的更改(示例范围:gulp、broccoli、npm)",
+          "title": "Builds"
+        },
+        "[持续集成]": {
+          "description": "对CI配置文件和脚本的更改(示例范围:Travis, Circle, BrowserStack, SauceLabs)",
+          "title": "Continuous Integrations"
+        },
+        "[其他提交]": {
+          "description": "除src目录或测试文件以外的修改",
+          "title": "Chores"
+        },
+        "[回退更改]": {
+          "description": "回退历史版本",
+          "title": "Reverts"
+        },
+        "[修改冲突]": {
+          "description": "修改冲突",
+          "title": "Conflict"
+        },
+        "[字体修改]": {
+          "description": "字体文件更新",
+          "title": "Fonts"
+        },
+        "[删除文件]": {
+          "description": "删除文件",
+          "title": "Delete Files"
+        },
+        "[暂存文件]": {
+          "description": "暂存文件",
+          "title": "Stash Files"
+        }
+      }
+    }
+  }
 }

@@ -10,5 +10,4 @@ const data = ref(233)
   </div>
 </template>
 
-<style lang="less" scoped>
-</style>
+<style lang="less" scoped></style>

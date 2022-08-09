@@ -22,13 +22,12 @@ export default defineComponent({
       return styleStr
     }
 
-    return () =>
+    return () => (
       <>
-        <button
-          class={setStyle()}
-          onClick={(evt: MouseEvent) => emit('click', evt)}>
+        <button class={setStyle()} onClick={(evt: MouseEvent) => emit('click', evt)}>
           <span class={`${Name}-span`}>{slots.default && slots.default()}</span>
         </button>
       </>
+    )
   }
 })

@@ -18,7 +18,6 @@ import { MfButton } from '@/packages'
 </template>
 
 <style scoped lang="less">
-
 section {
   display: flex;
 }
