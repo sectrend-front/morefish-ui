@@ -7,6 +7,7 @@ export default defineComponent({
     type: String,
     round: Boolean,
     plain: Boolean,
+    dashed: Boolean,
     size: {
       default: 'default',
       type: String
@@ -19,6 +20,7 @@ export default defineComponent({
       styleStr += `${Name}`
       styleStr += props.type && Types.includes(props.type) ? ` ${Name}-type-${props.type}` : ''
       styleStr += Sizes.includes(props.size) ? ` ${Name}-size-${props.size}` : ''
+      styleStr += props.dashed ? ` ${Name}-dashed` : ''
       return styleStr
     }
 

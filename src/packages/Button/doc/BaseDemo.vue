@@ -4,10 +4,11 @@ import { MfButton } from '@/packages'
 
 <template>
   <div>
-    <mf-button type="primary" round size="large">Primary 重要</mf-button>
-    <mf-button type="success" size="large">Success</mf-button>
-    <mf-button type="info" size="small">Info</mf-button>
+    <mf-button>Deafult</mf-button>
+    <mf-button type="primary">Primary</mf-button>
+    <mf-button type="success">Success</mf-button>
+    <mf-button type="info">Info</mf-button>
     <mf-button type="warning">Warning</mf-button>
-    <mf-button type="danger">危险</mf-button>
+    <mf-button type="danger">Danger</mf-button>
   </div>
 </template>
