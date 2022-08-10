@@ -12,4 +12,5 @@ const testBu: MapValue[] = [{ text: '按钮 Button', url: '/button' }]
 test('IndexTable func ---test', () => {
   expect(searchIndexMap('b')).toStrictEqual(testB)
   expect(searchIndexMap('bu')).toStrictEqual(testBu)
+  // expect(searchIndexMap('')).toStrictEqual([])
 })
