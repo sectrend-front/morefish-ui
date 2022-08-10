@@ -1,46 +1,46 @@
 <script setup lang="ts">
-import { menu, system, search } from './const '
-import { ref } from 'vue'
+import { menu, system } from './const '
+import { searchIndexMap, MapValue } from '@/const/IndexMap'
+import { onMounted, ref } from 'vue'
 import router from '@/router'
-type Isearch = {
-  component: string
-  url: string
-}
+
 const menuCurrent = ref<number>()
 const systemCurrent = ref<number>()
 const searchListCurrent = ref<number>(0)
 const searchVal = ref<string>('')
-const searchList = ref<Isearch[]>([])
+const searchList = ref<MapValue[]>([])
 const searchFlag = ref<boolean>(false)
-const menuClick = (index) => {
+const menuClick = (index: number) => {
   menuCurrent.value = index
 }
-const systemClick = (index) => {
+const systemClick = (index: number) => {
   systemCurrent.value = index
 }
 const searchChange = () => {
   if (searchVal.value) {
-    searchList.value = search.filter((el) => {
-      return el.component.toLowerCase().split('').includes(searchVal.value.trim().toLowerCase())
-    })
+    searchList.value = searchIndexMap(searchVal.value)
   } else {
     searchList.value = []
   }
 }
-const listEnter = (index) => {
+const listEnter = (index: number) => {
   searchListCurrent.value = index
 }
-const listActive = (item: Isearch) => {
+const listActive = (item: MapValue) => {
   router.push(item.url)
   searchVal.value = ''
   searchList.value = []
 }
-const searchBlur = () => {
-  searchFlag.value = false
+const searchBlur = (e: any) => {
+  if (e.target.localName !== 'li' && e.target.localName !== 'input') {
+    searchFlag.value = false
+  } else {
+    searchFlag.value = true
+  }
 }
-const searchFocus = () => {
-  searchFlag.value = true
-}
+onMounted(() => {
+  window.addEventListener('click', searchBlur)
+})
 </script>
 <template>
   <div class="box">
@@ -50,7 +50,7 @@ const searchFocus = () => {
         <span :class="{ menuActive: menuCurrent === index }">{{ item }}</span>
       </div>
       <div class="searchBox">
-        <input type="text" placeholder="搜索" @input="searchChange" @focus="searchFocus" @blur="searchBlur" v-model="searchVal" />
+        <input type="text" placeholder="搜索" @input="searchChange" v-model="searchVal" />
         <ul class="list" :class="{ searchBlur: !searchFlag }" v-if="searchList.length !== 0">
           <li
             v-for="(item, index) in searchList"
@@ -59,7 +59,7 @@ const searchFocus = () => {
             @mouseenter="listEnter(index)"
             @click="listActive(item)"
           >
-            {{ item.component }}
+            {{ item.text }}
           </li>
         </ul>
       </div>
