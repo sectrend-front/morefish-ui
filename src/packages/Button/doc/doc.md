@@ -1,19 +1,15 @@
 <script setup lang="ts">
 import BaseDemo from './BaseDemo.vue'
+import DashedDemo from './DashedDemo.vue'
   const code = 
-`<template>
-  <div>
-    <section>
-      <mf-button type="primary" round size="large">Primary 重要</mf-button>
-      <mf-button type="success" size="large">Success</mf-button>
-      <mf-button type="info" size="small">Info</mf-button>
-      <mf-button type="warning">Warning</mf-button>
-      <mf-button type="danger">危险</mf-button>
-    </section>
-    <highlightjs autodetect code="const x = 5;" />
-    <router-view></router-view>
-  </div>
-</template>`
+`<div>
+  <mf-button>deafult</mf-button>
+  <mf-button type="primary">Primary 重要</mf-button>
+  <mf-button type="success">Success</mf-button>
+  <mf-button type="info">Info</mf-button>
+  <mf-button type="warning">Warning</mf-button>
+  <mf-button type="danger">Danger</mf-button>
+</div>`
 
 </script>
 
@@ -27,14 +23,18 @@ import BaseDemo from './BaseDemo.vue'
 
 ### 基础按钮
 
-按钮的 type 分别为 default、primary、info、success、warning 和 error
+按钮的 type 分别为 default、primary、success、info、warning 和 danger
 <show-box :code="code">
-<BaseDemo/>
+  <BaseDemo/>
 </show-box>
 
 ### 次要按钮
 
 ### 虚线按钮
+
+<show-box :code="code">
+  <DashedDemo/>
+</show-box>
 
 ### 形状
 

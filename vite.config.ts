@@ -13,7 +13,8 @@ export default defineConfig({
   },
   plugins: [vue({ include: [/\.md$/, /\.vue$/] }), vueJsx({}), MarkDown()],
   server: {
-    hmr: true
+    hmr: true,
+    host: '0.0.0.0'
   },
   define: {
     __VUE_OPTIONS_API__: false
