@@ -5,33 +5,57 @@
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* background-color: #242424; */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  --themeColor:#fff;
+  --textColor: #213547;
+  --borderColor: rgb(226, 226, 230);
+  --menuColor: #18a058;
+  --inputBgColor: #fff
+}
+
+/* 浅色模式样式*/
+html:not(.dark) {
+  --themeColor:#fff;
+  --textColor: #213547;
+  --borderColor: rgb(226, 226, 230)
+}
+
+/* 深色模式样式*/
+html.dark{
+  --themeColor:#242424;
+  --textColor: #fff;
+  --borderColor: rgba(255, 255, 255, 0.09);
+  --inputBgColor: rgba(255, 255, 255, 0.09);
 }
 
 #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+  transition: all 0.5s;
+  background-color: var(--themeColor);
+  color: var(--textColor);
+  border-color: var(--borderColor);
 }
 
-/* 浅色模式样式 */
+/* 浅色模式样式
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: var(--themeColor);
   }
   a:hover {
     color: #747bff;
   }
-}
+} */
 
 /* 深色模式样式 */
 
-@media (prefers-color-scheme: dark) {
-}
+/* @media (prefers-color-scheme: dark) {
+} */
