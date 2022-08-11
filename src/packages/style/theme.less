@@ -1,6 +1,8 @@
+@import url(./common.less);
+
 :root {
   --themeColor: #fff;
-  --textColor: #213547;
+  --textColor: @fontColorBlack;
   --borderColor: rgb(226, 226, 230);
   --menuColor: #18a058;
   --inputBgColor: #fff;
@@ -10,11 +12,9 @@
   background-color: var(--themeColor);
 }
 
-
-/* 深色模式样式*/
 html.dark {
   --themeColor: #242424;
-  --textColor: #fff;
+  --textColor: @fontColorWhite;
   --borderColor: rgba(255, 255, 255, 0.09);
   --inputBgColor: rgba(255, 255, 255, 0.09);
 }

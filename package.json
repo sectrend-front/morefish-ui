@@ -1,6 +1,6 @@
 {
   "name": "morefish-ui",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "type": "module",
   "main": "./dist/morefish.umd.js",
   "module": "./dist/morefish.es.js",
@@ -35,15 +35,17 @@
     "build": "zx script/build.mjs",
     "preview": "vite preview",
     "prettier": "prettier --write .",
-    "git-cz": "git add .&&git cz",
+    "git-commit": "zx script/commit.mjs",
     "test": "vitest",
-    "test-coverage": "vitest run --coverage"
+    "test-coverage": "vitest run --coverage",
+    "publish": "npm publish",
+    "update morefish": "pnpm remove morefish-ui&&pnpm add morefish-ui"
   },
   "dependencies": {
     "@highlightjs/vue-plugin": "^2.1.0",
     "@vueuse/core": "^9.1.0",
     "dayjs": "^1.11.4",
-    "morefish-ui": "^0.0.1",
+    "morefish-ui": "^0.0.3",
     "pinia": "^2.0.17",
     "vue": "^3.2.37",
     "vue-router": "^4.1.3"

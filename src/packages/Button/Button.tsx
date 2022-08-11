@@ -8,6 +8,8 @@ export default defineComponent({
     round: Boolean,
     plain: Boolean,
     dashed: Boolean,
+    strong: Boolean,
+    ghost: Boolean,
     size: {
       default: 'default',
       type: String
@@ -21,6 +23,8 @@ export default defineComponent({
       styleStr += props.type && Types.includes(props.type) ? ` ${Name}-type-${props.type}` : ''
       styleStr += Sizes.includes(props.size) ? ` ${Name}-size-${props.size}` : ''
       styleStr += props.dashed ? ` ${Name}-dashed` : ''
+      styleStr += props.strong ? ` ${Name}-strong` : ''
+      styleStr += props.ghost ? ` ${Name}-ghost` : ''
       return styleStr
     }
 

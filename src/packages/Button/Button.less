@@ -1,5 +1,5 @@
 @import url(../style/common.less);
-@fontSize: 14px;
+
 @btnHeight: 32px;
 @deafultBgColor: rgba(107, 107, 107, 0.5);
 
@@ -18,11 +18,13 @@
   margin-right: 5px;
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   background-color: @deafultBgColor;
-  color: var(--textColor);
   .btnHov(@deafultBgColor);
+  color: var(--textColor);
 
   /* 基础 */
   .btnHov(@color) {
+    color: @fontColorBlack;
+
     &:hover {
       background-color: lighten(@color, 10%);
     }
@@ -60,13 +62,13 @@
 
   &-size-large {
     height: @btnHeight * 1.25;
-    font-size: 16px;
+    font-size: @fontSizeLarge;
     padding: 0 20px;
   }
 
   &-size-small {
     height: (@btnHeight / 1.25);
-    font-size: 12px;
+    font-size: @fontSizeSmall;
     padding: 0 8px;
   }
 
@@ -86,7 +88,7 @@
   }
 
   &-dashed {
-    color: inherit;
+    color: var(--textColor);
     background-color: inherit;
     border: 1px dashed;
 
@@ -95,11 +97,9 @@
     }
 
     &:active {
-      color: inherit;
+      color: lighten(@fontColorBlack, 50%);
     }
-  }
 
-  &-dashed {
     &.mf-button-type-primary {
       .btnDash(@primaryColor);
     }
@@ -119,5 +119,53 @@
     &.mf-button-type-danger {
       .btnDash(@dangerColor);
     }
+  }
+
+  /* strong */
+  &-strong {
+    font-weight: 600;
+  }
+}
+
+/* 透明 ghost */
+.btnGhost(@color) {
+  color: @color;
+  background-color: fade(@color, 20%);
+
+  &:hover {
+    background-color: fade(@color, 30%);
+  }
+
+  &:active {
+    box-shadow: none;
+    background-color: fade(@color, 10%);
+  }
+}
+
+.dark .mf-button.mf-button-ghost {
+  .btnGhost(@fontColorWhite);
+}
+
+.mf-button.mf-button-ghost {
+  .btnGhost(@fontColorBlack);
+
+  &.mf-button-type-primary {
+    .btnGhost(@primaryColor);
+  }
+
+  &.mf-button-type-success {
+    .btnGhost(@successColor);
+  }
+
+  &.mf-button-type-info {
+    .btnGhost(@infoColor);
+  }
+
+  &.mf-button-type-warning {
+    .btnGhost(@warningColor);
+  }
+
+  &.mf-button-type-danger {
+    .btnGhost(@dangerColor);
   }
 }
