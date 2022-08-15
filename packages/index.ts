@@ -1,6 +1,6 @@
 import { App } from 'vue'
 import './style/theme.less'
-import MfButton from './Button'
+import MfButton from '#c/Button'
 import './utils/theme'
 
 const components = {

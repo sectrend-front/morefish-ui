@@ -1,9 +1,8 @@
-<script setup lang="ts">
-import { MfButton } from '@/packages'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div>
+    <p>233</p>
     <mf-button>Deafult</mf-button>
     <mf-button type="primary">Primary</mf-button>
     <mf-button type="success">Success</mf-button>

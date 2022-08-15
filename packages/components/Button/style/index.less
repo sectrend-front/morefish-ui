@@ -1,6 +1,5 @@
-@import url(../style/common.less);
+@import url(#/style/var.less);
 
-@btnHeight: 32px;
 @deafultBgColor: rgba(107, 107, 107, 0.5);
 
 .mf-button {
@@ -15,7 +14,11 @@
   user-select: none;
   cursor: pointer;
   font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+
   margin-right: 5px;
+
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   background-color: @deafultBgColor;
   .btnHov(@deafultBgColor);
@@ -24,6 +27,7 @@
   /* 基础 */
   .btnHov(@color) {
     color: @fontColorBlack;
+    background-color: @color;
 
     &:hover {
       background-color: lighten(@color, 10%);
@@ -36,38 +40,34 @@
   }
 
   &-type-primary {
-    background-color: @primaryColor;
     .btnHov(@primaryColor);
   }
 
   &-type-success {
-    background-color: @successColor;
     .btnHov(@successColor);
   }
 
   &-type-info {
-    background-color: @infoColor;
     .btnHov(@infoColor);
   }
 
   &-type-warning {
-    background-color: @warningColor;
     .btnHov(@warningColor);
   }
 
   &-type-danger {
-    background-color: @dangerColor;
     .btnHov(@dangerColor);
   }
 
+  /* size */
   &-size-large {
-    height: @btnHeight * 1.25;
+    height: @btnHeightLarge;
     font-size: @fontSizeLarge;
     padding: 0 20px;
   }
 
   &-size-small {
-    height: (@btnHeight / 1.25);
+    height: @btnHeightSmall;
     font-size: @fontSizeSmall;
     padding: 0 8px;
   }
@@ -124,6 +124,47 @@
   /* strong */
   &-strong {
     font-weight: 600;
+  }
+
+  /* disabled */
+  &-disabled {
+    cursor: no-drop;
+    opacity: 0.5;
+  }
+
+  /* round */
+  &-round {
+    border-radius: @btnHeight;
+    padding: 0 (@btnHeight / 1.6);
+  }
+
+  &-round&-size-large {
+    border-radius: @btnHeightLarge;
+    padding: 0 (@btnHeight / 1.35);
+  }
+
+  &-round&-size-small {
+    border-radius: @btnHeightSmall;
+    padding: 0 (@btnHeight / 2);
+  }
+
+  /* circle */
+  &-circle {
+    border-radius: 50%;
+    width: @btnHeight;
+    padding: 0;
+  }
+
+  &-circle&-size-large {
+    width: @btnHeightLarge;
+
+    span {
+      line-height: @btnHeightLarge * 1.05;
+    }
+  }
+
+  &-circle&-size-small {
+    width: @btnHeightSmall;
   }
 }
 

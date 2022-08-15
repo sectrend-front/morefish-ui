@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import { MfButton } from '@/packages'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div>
@@ -9,6 +7,6 @@ import { MfButton } from '@/packages'
     <mf-button type="success" ghost strong>Success</mf-button>
     <mf-button type="info" ghost>Info</mf-button>
     <mf-button type="warning" ghost>Warning</mf-button>
-    <mf-button type="danger" ghost strong dashed>Danger</mf-button>
+    <mf-button type="danger" ghost strong>Danger</mf-button>
   </div>
 </template>

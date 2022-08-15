@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import { MfButton } from '@/packages'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div>
