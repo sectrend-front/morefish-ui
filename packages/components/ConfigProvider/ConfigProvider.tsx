@@ -1,7 +1,7 @@
 import { defineComponent, provide, type PropType, ref } from 'vue'
-import { configProviderContextKey } from '@/packages/tokens/config-provider'
+import { configProviderContextKey } from '#/tokens/config-provider'
 import { SIZE } from './const'
-import English from '../locale/lang/en'
+import English from '#/locale/lang/en'
 import { IConfigProviderButtonProps, IConfigProviderMessageProps } from './interfaces'
 
 export const configProviderProps = {

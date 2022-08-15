@@ -1,6 +1,8 @@
 import { App } from 'vue'
-import MfButton from './Button'
-import MFConfigProvider from './ConfigProvider'
+import './style/theme.less'
+import MfButton from '#c/Button'
+import MFConfigProvider from '#c/ConfigProvider'
+import './utils/theme'
 
 const components = {
   MfButton,

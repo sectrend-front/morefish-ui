@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { MfButton, MFConfigProvider } from '@/packages'
-import zh from '../packages/locale/lang/zh'
+import { MfButton, MFConfigProvider } from '#'
+import zh from '#/locale/lang/zh'
 </script>
 
 <template>

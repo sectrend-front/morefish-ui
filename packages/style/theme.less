@@ -1,0 +1,20 @@
+@import url(./var.less);
+
+:root {
+  --themeColor: #fff;
+  --textColor: @fontColorBlack;
+  --borderColor: rgb(226, 226, 230);
+  --menuColor: #18a058;
+  --inputBgColor: #fff;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: var(--textColor);
+  border-color: var(--borderColor);
+  background-color: var(--themeColor);
+}
+
+html.dark {
+  --themeColor: #242424;
+  --textColor: @fontColorWhite;
+  --borderColor: rgba(255, 255, 255, 0.09);
+  --inputBgColor: rgba(255, 255, 255, 0.09);
+}

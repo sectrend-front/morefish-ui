@@ -1,0 +1,212 @@
+@import url(#/style/var.less);
+
+@deafultBgColor: rgba(107, 107, 107, 0.5);
+
+.mf-button {
+  height: @btnHeight;
+  padding: 0px 16px;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  font-size: @fontSize;
+  border: none;
+  border-radius: 3px;
+  user-select: none;
+  cursor: pointer;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+
+  margin-right: 5px;
+
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  background-color: @deafultBgColor;
+  .btnHov(@deafultBgColor);
+  color: var(--textColor);
+
+  /* 基础 */
+  .btnHov(@color) {
+    color: @fontColorBlack;
+    background-color: @color;
+
+    &:hover {
+      background-color: lighten(@color, 10%);
+    }
+
+    &:active {
+      background-color: @color;
+      box-shadow: 0px 0px 5px 1px @color;
+    }
+  }
+
+  &-type-primary {
+    .btnHov(@primaryColor);
+  }
+
+  &-type-success {
+    .btnHov(@successColor);
+  }
+
+  &-type-info {
+    .btnHov(@infoColor);
+  }
+
+  &-type-warning {
+    .btnHov(@warningColor);
+  }
+
+  &-type-danger {
+    .btnHov(@dangerColor);
+  }
+
+  /* size */
+  &-size-large {
+    height: @btnHeightLarge;
+    font-size: @fontSizeLarge;
+    padding: 0 20px;
+  }
+
+  &-size-small {
+    height: @btnHeightSmall;
+    font-size: @fontSizeSmall;
+    padding: 0 8px;
+  }
+
+  /* 虚线 */
+  .btnDash(@color) {
+    color: @color;
+    border: 1px dashed @color;
+
+    &:hover {
+      background-color: inherit;
+      color: lighten(@color, 20%);
+    }
+
+    &:active {
+      color: @color;
+    }
+  }
+
+  &-dashed {
+    color: var(--textColor);
+    background-color: inherit;
+    border: 1px dashed;
+
+    &:hover {
+      background-color: inherit;
+    }
+
+    &:active {
+      color: lighten(@fontColorBlack, 50%);
+    }
+
+    &.mf-button-type-primary {
+      .btnDash(@primaryColor);
+    }
+
+    &.mf-button-type-success {
+      .btnDash(@successColor);
+    }
+
+    &.mf-button-type-info {
+      .btnDash(@infoColor);
+    }
+
+    &.mf-button-type-warning {
+      .btnDash(@warningColor);
+    }
+
+    &.mf-button-type-danger {
+      .btnDash(@dangerColor);
+    }
+  }
+
+  /* strong */
+  &-strong {
+    font-weight: 600;
+  }
+
+  /* disabled */
+  &-disabled {
+    cursor: no-drop;
+    opacity: 0.5;
+  }
+
+  /* round */
+  &-round {
+    border-radius: @btnHeight;
+    padding: 0 (@btnHeight / 1.6);
+  }
+
+  &-round&-size-large {
+    border-radius: @btnHeightLarge;
+    padding: 0 (@btnHeight / 1.35);
+  }
+
+  &-round&-size-small {
+    border-radius: @btnHeightSmall;
+    padding: 0 (@btnHeight / 2);
+  }
+
+  /* circle */
+  &-circle {
+    border-radius: 50%;
+    width: @btnHeight;
+    padding: 0;
+  }
+
+  &-circle&-size-large {
+    width: @btnHeightLarge;
+
+    span {
+      line-height: @btnHeightLarge * 1.05;
+    }
+  }
+
+  &-circle&-size-small {
+    width: @btnHeightSmall;
+  }
+}
+
+/* 透明 ghost */
+.btnGhost(@color) {
+  color: @color;
+  background-color: fade(@color, 20%);
+
+  &:hover {
+    background-color: fade(@color, 30%);
+  }
+
+  &:active {
+    box-shadow: none;
+    background-color: fade(@color, 10%);
+  }
+}
+
+.dark .mf-button.mf-button-ghost {
+  .btnGhost(@fontColorWhite);
+}
+
+.mf-button.mf-button-ghost {
+  .btnGhost(@fontColorBlack);
+
+  &.mf-button-type-primary {
+    .btnGhost(@primaryColor);
+  }
+
+  &.mf-button-type-success {
+    .btnGhost(@successColor);
+  }
+
+  &.mf-button-type-info {
+    .btnGhost(@infoColor);
+  }
+
+  &.mf-button-type-warning {
+    .btnGhost(@warningColor);
+  }
+
+  &.mf-button-type-danger {
+    .btnGhost(@dangerColor);
+  }
+}
