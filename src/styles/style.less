@@ -18,7 +18,21 @@
   margin: 0 auto;
 }
 
-.doc-body p:not(.show-box p) {
-  font-size: 14px;
-  font-weight: 600;
+.doc-body {
+  ul:not(.show-box ul) {
+    padding: 0px 20px;
+    margin-top: -10px;
+  }
+
+  p:not(.show-box p),
+  ul:not(.show-box ul) {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  p span:not(.show-box span) {
+    background-color: rgba(#808080, 0.25);
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
 }

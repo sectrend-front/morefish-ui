@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "noImplicitAny": false,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "#/*": ["./packages/*"],
+      "#c/*": ["./packages/components/*"],
+      "#d/*": ["./packages/doc/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
