@@ -1,8 +1,10 @@
 import { App } from 'vue'
 import MfButton from './Button'
+import MFConfigProvider from './ConfigProvider'
 
 const components = {
-  MfButton
+  MfButton,
+  MFConfigProvider
 }
 
 const install = (app: App) => {
@@ -13,6 +15,7 @@ const install = (app: App) => {
 }
 
 export { MfButton }
+export { MFConfigProvider }
 export default {
   install
 }

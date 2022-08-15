@@ -18,6 +18,11 @@ const router = createRouter({
           component: () => import('@/packages/Button/doc/doc.md')
         }
       ]
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: () => import('@/views/TestWorld.vue')
     }
   ]
 })
