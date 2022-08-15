@@ -10,7 +10,6 @@ const router = createRouter({
     {
       path: '/document',
       name: 'document',
-      component: () => import('@/views/TestWorld.vue'),
       children: [
         {
           path: 'button',

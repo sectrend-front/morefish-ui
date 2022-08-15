@@ -44,7 +44,10 @@ export default defineComponent({
     return () => (
       <>
         <button class={setClass()} onClick={(evt: MouseEvent) => emit('click', evt)} disabled={props.disabled}>
-          <span class={`${Name}-span`}>{slots.default && slots.default()}</span>
+          <span class={`${Name}-span`}>
+            {slots.icon && slots.icon()}
+            {slots.default && slots.default()}
+          </span>
         </button>
       </>
     )

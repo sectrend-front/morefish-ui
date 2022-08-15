@@ -4,6 +4,7 @@ import GhostDemo from './GhostDemo.vue'
 import DashedDemo from './DashedDemo.vue'
 import ShapeDemo from './ShapeDemo.vue'
 import SizeDemo from './SizeDemo.vue'
+import IconDemo from './IconDemo.vue'
 import DisabledDemo from './DisabledDemo.vue'
 
 const code = `<div>
@@ -68,7 +69,9 @@ const code = `<div>
 
     <h3>图标</h3>
     <p>在按钮上使用图标</p>
-    <show-box :code="code"> </show-box>
+    <show-box :code="code">
+      <IconDemo />
+    </show-box>
 
     <h3>禁用</h3>
     <p>按钮可以被禁用</p>
