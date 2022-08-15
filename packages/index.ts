@@ -1,10 +1,12 @@
 import { App } from 'vue'
 import './style/theme.less'
 import MfButton from '#c/Button'
+import MFConfigProvider from '#c/ConfigProvider'
 import './utils/theme'
 
 const components = {
-  MfButton
+  MfButton,
+  MFConfigProvider
 }
 
 const install = (app: App) => {
@@ -15,6 +17,7 @@ const install = (app: App) => {
 }
 
 export { MfButton }
+export { MFConfigProvider }
 export default {
   install
 }

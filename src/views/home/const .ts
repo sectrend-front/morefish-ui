@@ -1,6 +1,6 @@
 const menu = ['首页', '文档', '组件']
 
-const system = ['English', '深色', 'Github']
+const system = ['English', 'Github']
 
 const version = '0.0.1'
 
