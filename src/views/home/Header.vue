@@ -10,18 +10,11 @@ const searchListCurrent = ref<number>(0)
 const searchVal = ref<string>('')
 const searchList = ref<MapValue[]>([])
 const searchFlag = ref<boolean>(false)
-const theme = ref<string>('深色')
+const theme = ref<boolean>(false)
 const menuClick = (index: number) => {
   menuCurrent.value = index
 }
-const systemClick = (item: string, index: number) => {
-  if (item === '深色') {
-    theme.value = '浅色'
-    document.getElementsByTagName('html')[0].className = 'dark'
-  } else {
-    theme.value = '深色'
-    document.getElementsByTagName('html')[0].className = ''
-  }
+const systemClick = (index: number) => {
   systemCurrent.value = index
 }
 const searchChange = () => {
@@ -46,7 +39,19 @@ const searchBlur = (e: any) => {
     searchFlag.value = true
   }
 }
+// theme切换
+const themeSwitch = () => {
+  if (!theme.value) {
+    document.getElementsByTagName('html')[0].className = 'dark'
+  } else {
+    document.getElementsByTagName('html')[0].className = ''
+  }
+}
 onMounted(() => {
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.getElementsByTagName('html')[0].className = 'dark'
+    theme.value = true
+  }
   window.addEventListener('click', searchBlur)
 })
 </script>
@@ -74,10 +79,13 @@ onMounted(() => {
     </div>
     <div class="systemBox">
       <div v-for="(item, index) in system" :key="index" class="system" :class="{ systemActive: systemCurrent === index }">
-        <span v-if="item === '深色'" @click="systemClick(theme, index)">{{ theme }}</span>
-        <span v-else @click="systemClick(item, index)">{{ item }}</span>
+        <span @click="systemClick(index)">{{ item }}</span>
       </div>
-      <span class="version">{{ version }}</span>
+      <label class="switch" @click="themeSwitch">
+        <input type="checkbox" v-model="theme" />
+        <span class="slider"></span>
+      </label>
+      <span>{{ version }}</span>
     </div>
   </div>
 </template>
