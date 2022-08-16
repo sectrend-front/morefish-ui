@@ -1,15 +1,21 @@
 <script setup lang="ts">
-// import { ref } from 'vue'
-</script>
+const props = defineProps({
+  rotate: Number,
+  spin: Boolean
+})
 
+const setClass = () => {
+  console.log(props)
+}
+</script>
 <template>
-  <i class="el-icon">
+  <i class="mf-icon" :class="setClass()">
     <slot />
   </i>
 </template>
 
 <style lang="less" scoped>
-.el-icon {
+.mf-icon {
   height: 1em;
   width: 1em;
   line-height: 1em;

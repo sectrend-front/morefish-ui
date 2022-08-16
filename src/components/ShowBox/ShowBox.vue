@@ -25,6 +25,10 @@ const codeShow = ref(false)
     text-align: center;
     cursor: pointer;
   }
+  .show-components {
+    display: flex;
+    align-items: center;
+  }
   margin-bottom: 30px;
 }
 </style>

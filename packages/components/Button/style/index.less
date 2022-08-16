@@ -1,4 +1,5 @@
 @import url(#/style/var.less);
+@import url(#/style/common.less);
 
 @deafultBgColor: rgba(107, 107, 107, 0.5);
 
@@ -16,6 +17,9 @@
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   margin-right: 5px;
 
@@ -165,6 +169,12 @@
 
   &-circle&-size-small {
     width: @btnHeightSmall;
+  }
+
+  /* icon */
+  .mf-icon + &-span,
+  &-span + .mf-icon {
+    margin-left: 5px;
   }
 }
 

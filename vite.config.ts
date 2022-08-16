@@ -10,7 +10,8 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
       '#': resolve(__dirname, 'packages'),
       '#c': resolve(__dirname, 'packages/components'),
-      '#d': resolve(__dirname, 'packages/doc')
+      '#d': resolve(__dirname, 'packages/doc'),
+      '#i': resolve(__dirname, 'packages/icon')
     }
   },
   plugins: [vue(), vueJsx({})],

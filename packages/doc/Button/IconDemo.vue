@@ -1,31 +1,36 @@
 <script setup lang="ts">
-import Edit from './icon/Edit.vue'
-import { ElButton, ElIcon } from 'element-plus'
-import 'element-plus/dist/index.css'
+import { Edit, Star, Setting, Refresh } from '../../icon'
 </script>
 
 <template>
-  <div>
-    <el-button type="primary">
-      <template #icon>
-        <ElIcon>
-          <Edit />
-        </ElIcon>
-      </template>
-      233
-    </el-button>
-
-    <mf-button type="primary" ghost>
-      <template #icon>
-        <mf-icon>
-          <Edit />
-        </mf-icon>
-      </template>
-      不准点！
-    </mf-button>
-    <mf-button disabled>可以点！</mf-button>
-    <mf-button type="success" disabled>以点！</mf-button>
-    <mf-button type="info" dashed ghost disabled>点！</mf-button>
-    <mf-button type="warning" size="small" disabled>！</mf-button>
-  </div>
+  <mf-button type="primary">
+    <template #icon>
+      <mf-icon>
+        <Edit />
+      </mf-icon>
+    </template>
+    Edit
+  </mf-button>
+  <mf-button type="success">
+    <template #iconAfter>
+      <mf-icon>
+        <Star />
+      </mf-icon>
+    </template>
+    Star
+  </mf-button>
+  <mf-button type="warning" circle>
+    <template #icon>
+      <mf-icon>
+        <Setting />
+      </mf-icon>
+    </template>
+  </mf-button>
+  <mf-button type="danger" round>
+    <template #icon>
+      <mf-icon>
+        <Refresh />
+      </mf-icon>
+    </template>
+  </mf-button>
 </template>
