@@ -1,9 +1,18 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { readSouceCode } from './readSouceCode'
+
 const props = defineProps({
-  code: String
+  path: String
 })
 const codeShow = ref(false)
+const codeStr = ref('')
+
+if (props.path) {
+  readSouceCode(props.path).then((res) => {
+    codeStr.value = res
+  })
+}
 </script>
 
 <template>
@@ -11,7 +20,7 @@ const codeShow = ref(false)
     <div class="show-components">
       <slot />
     </div>
-    <highlightjs autodetect :code="props.code" v-show="codeShow" />
+    <highlightjs autodetect :code="codeStr" v-show="codeShow" />
     <div class="show-code-btn" @click="codeShow = !codeShow">{{ codeShow ? '隐藏代码' : '展示代码' }}</div>
   </div>
 </template>

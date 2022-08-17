@@ -173,8 +173,20 @@
 
   /* icon */
   .mf-icon + &-span,
-  &-span + .mf-icon {
+  &-span + .mf-icon,
+  &-loading-icon + &-span,
+  &-span + &-loading-icon {
     margin-left: 5px;
+  }
+
+  /* loading */
+  &-loading {
+    cursor: progress;
+  }
+
+  &-loading-icon {
+    .iconInit();
+    animation: icon-rotate-360 1s linear infinite;
   }
 }
 

@@ -1,5 +1,3 @@
-// import Edit from './Edit.vue'
-
 import Edit from './Edit.vue'
 import Star from './Star.vue'
 import Refresh from './Refresh.vue'

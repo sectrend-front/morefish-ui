@@ -1,7 +1,26 @@
-.d-if() {
+/* SVG图标基本样式 */
+.iconInit() {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  fill: currentColor;
+  color: inherit;
 }
 
-.ai-c() {
-  align-items: center;
+@keyframes icon-rotate-360 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

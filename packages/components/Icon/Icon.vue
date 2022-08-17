@@ -1,29 +1,32 @@
 <script setup lang="ts">
+import { type PropType, type VNode } from 'vue'
+
 const props = defineProps({
   rotate: Number,
-  spin: Boolean
+  spin: Boolean,
+  size: Number,
+  color: String,
+  icon: Object as PropType<VNode>
 })
 
 const setClass = () => {
-  console.log(props)
+  console.log(props.icon)
 }
 </script>
 <template>
   <i class="mf-icon" :class="setClass()">
-    <slot />
+    <template v-if="props.icon">
+      <component :is="props.icon" />
+    </template>
+    <template v-else>
+      <slot />
+    </template>
   </i>
 </template>
 
 <style lang="less" scoped>
+@import url(#/style/common.less);
 .mf-icon {
-  height: 1em;
-  width: 1em;
-  line-height: 1em;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  fill: currentColor;
-  color: inherit;
+  .iconInit();
 }
 </style>

@@ -1,6 +1,7 @@
 import { defineComponent } from 'vue'
 import { Types, Name, Sizes } from './const'
 import './style/index.less'
+import { Loading } from '../../icon'
 
 export default defineComponent({
   props: {
@@ -22,7 +23,8 @@ export default defineComponent({
     loading: {
       default: false,
       type: Boolean
-    }
+    },
+    color: String
   },
   emits: ['click'],
   setup(props, { slots, emit }) {
@@ -43,8 +45,12 @@ export default defineComponent({
 
     return () => (
       <>
-        <button class={setClass()} onClick={(evt: MouseEvent) => emit('click', evt)} disabled={props.disabled}>
-          {props.loading && <span>*</span>}
+        <button class={setClass()} onClick={(evt: MouseEvent) => emit('click', evt)} disabled={props.disabled || props.loading}>
+          {props.loading && (
+            <i class={`${Name}-loading-icon`}>
+              <Loading />
+            </i>
+          )}
           {!props.loading && slots.icon && slots.icon()}
           {slots.default && <span class={`${Name}-span`}>{slots.default()}</span>}
           {!props.loading && slots.iconAfter && slots.iconAfter()}

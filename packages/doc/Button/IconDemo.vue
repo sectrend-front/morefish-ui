@@ -28,9 +28,7 @@ import { Edit, Star, Setting, Refresh } from '../../icon'
   </mf-button>
   <mf-button type="danger" round>
     <template #icon>
-      <mf-icon>
-        <Refresh />
-      </mf-icon>
+      <mf-icon :icon="Refresh" />
     </template>
   </mf-button>
 </template>
