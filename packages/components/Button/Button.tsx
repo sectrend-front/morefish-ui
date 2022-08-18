@@ -12,10 +12,7 @@ export default defineComponent({
     ghost: Boolean,
     round: Boolean,
     circle: Boolean,
-    size: {
-      default: 'default',
-      type: String
-    },
+    size: String,
     disabled: {
       default: false,
       type: Boolean

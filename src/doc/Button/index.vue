@@ -20,7 +20,6 @@ import LoadingDemo from './LoadingDemo.vue'
     <h3>基础按钮</h3>
     <p>
       按钮的
-
       <span>type</span>
       分别为 <span>default</span>、 <span>primary</span>、<span>success</span>、 <span>info</span>、
       <span>warning</span>
@@ -43,7 +42,7 @@ import LoadingDemo from './LoadingDemo.vue'
     </show-box>
 
     <h3>形状</h3>
-    <p>按钮拥有圆形 <span>circle</span>、圆角 <span>round</span>、方形三种形状</p>
+    <p>按钮拥有圆形 <span>circle</span>、圆角 <span>round</span> 和默认方形三种形状</p>
     <p>其中圆形适合放置：</p>
     <ul>
       <li>图标</li>
@@ -80,7 +79,43 @@ import LoadingDemo from './LoadingDemo.vue'
 
     <hr />
     <h2>API</h2>
+
     <h3>Button Props</h3>
+    <table class="doc-table">
+      <thead>
+        <tr>
+          <th>名称</th>
+          <th>类型</th>
+          <th>默认值</th>
+          <th>说明</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>type</td>
+        <td><span> 'default' | 'tertiary' | 'primary' | 'success' | 'info' | 'warning' | 'error' </span></td>
+        <td><span> 'default' </span></td>
+        <th>按钮的类型</th>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td><span> 'default' | 'tertiary' | 'primary' | 'success' | 'info' | 'warning' | 'error' </span></td>
+        <td><span> 'default' </span></td>
+        <th>按钮的类型</th>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td><span> 'default' | 'tertiary' | 'primary' | 'success' | 'info' | 'warning' | 'error' </span></td>
+        <td><span> 'default' </span></td>
+        <th>按钮的类型</th>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td><span> 'default' | 'tertiary' | 'primary' | 'success' | 'info' | 'warning' | 'error' </span></td>
+        <td><span> 'default' </span></td>
+        <th>按钮的类型</th>
+      </tr>
+    </table>
+
     <h3>Button Slots</h3>
   </div>
 </template>

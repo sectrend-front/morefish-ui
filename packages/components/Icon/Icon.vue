@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { type PropType, type VNode } from 'vue'
+import { IHTMLAttr } from './const'
 
 const props = defineProps({
   rotate: Number,
@@ -9,12 +10,19 @@ const props = defineProps({
   icon: Object as PropType<VNode>
 })
 
-const setClass = () => {
-  console.log(props.icon)
+const setStyle = () => {
+  const styleObj: IHTMLAttr = {}
+  if (props.size && Number(props.size)) styleObj.fontSize = `${Number(props.size)}px`
+  if (props.color) styleObj.color = props.color
+  console.log(props.rotate)
+  if (props.rotate && Number(props.rotate)) styleObj.transform = `rotate(${props.rotate}deg)`
+  console.log(styleObj)
+  return styleObj
 }
 </script>
+
 <template>
-  <i class="mf-icon" :class="setClass()">
+  <i class="mf-icon" :style="setStyle()">
     <template v-if="props.icon">
       <component :is="props.icon" />
     </template>

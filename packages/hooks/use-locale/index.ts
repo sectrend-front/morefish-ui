@@ -1,5 +1,5 @@
 import { computed, isRef, ref, unref } from 'vue'
-import { get } from 'lodash-unified'
+import { get } from 'lodash'
 import English from '../../locale/lang/en'
 import type { MaybeRef } from '@vueuse/core'
 import type { Ref } from 'vue'

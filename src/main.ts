@@ -12,6 +12,12 @@ import ShowBox from '@/components/ShowBox/ShowBox.vue'
 import MorefishUi from '../packages'
 import '#/style/theme.less'
 
+// import MorefishUi from '../dist/morefish.es.js'
+// import '../dist/static/index.d515b6e5.css'
+
+// import MorefishUi from 'morefish-ui'
+// import 'morefish-ui/dist/static/index.d515b6e5.css'
+
 const app = createApp(App)
 app.use(hljsVuePlugin)
 app.use(router)

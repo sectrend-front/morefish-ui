@@ -15,10 +15,6 @@ export default defineConfig({
     }
   },
   plugins: [vue(), vueJsx({})],
-  server: {
-    hmr: true,
-    host: '0.0.0.0'
-  },
   define: {
     __VUE_OPTIONS_API__: false
   },
@@ -27,19 +23,6 @@ export default defineConfig({
     cssCodeSplit: true,
     sourcemap: false,
     emptyOutDir: true,
-    lib: {
-      entry: resolve(__dirname, 'packages/index.ts'),
-      name: 'Morefish',
-      fileName: (format) => `morefish.${format}.js`,
-      formats: ['es', 'umd', 'iife']
-    },
-    rollupOptions: {
-      external: ['vue'],
-      output: {
-        globals: {
-          vue: 'Vue'
-        }
-      }
-    }
+    outDir: 'dist-doc'
   }
 })

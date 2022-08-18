@@ -14,7 +14,7 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Star, Setting } from '../../icon'
+import { Star, Setting } from '#/icon'
 const loadingRef = ref(false)
 const handleClick = () => {
   console.log(111)
