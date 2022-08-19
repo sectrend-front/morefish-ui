@@ -1,6 +1,6 @@
 type IHTMLAttr = {
   transform?: string
-  spin?: string
+  animation?: string
   fontSize?: string
   color?: string
 }

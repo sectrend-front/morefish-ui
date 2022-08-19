@@ -11,6 +11,25 @@ import BaseDemo from './BaseDemo.vue'
     <h2>演示</h2>
 
     <h3>基础使用</h3>
+    <p>给图标添加 <span>size</span> 和 <span>color</span> 属性</p>
+    <show-box path="Icon/BaseDemo">
+      <BaseDemo />
+    </show-box>
+
+    <h3>效果</h3>
+    <p>
+      将自定义 <span>SVG</span> 保存在一个新的 <span>.vue</span> 文件并导出给图标组件使用。（确保设定了 <span>SVG</span> 的
+      <span>viewBox</span> 属性）
+    </p>
+    <show-box path="Icon/BaseDemo">
+      <BaseDemo />
+    </show-box>
+
+    <h3>自定义图标</h3>
+    <p>
+      将自定义 <span>SVG</span> 保存在一个新的 <span>.vue</span> 文件并导出给图标组件使用。（确保设定了 <span>SVG</span> 的
+      <span>viewBox</span> 属性）
+    </p>
     <show-box path="Icon/BaseDemo">
       <BaseDemo />
     </show-box>
@@ -18,7 +37,7 @@ import BaseDemo from './BaseDemo.vue'
     <hr />
     <h2>API</h2>
 
-    <h3>Button Props</h3>
+    <h3>Icon Props</h3>
     <table class="doc-table">
       <thead>
         <tr>
@@ -29,32 +48,14 @@ import BaseDemo from './BaseDemo.vue'
         </tr>
       </thead>
       <tr>
-        <td>type</td>
-        <td><span> 'default' | 'tertiary' | 'primary' | 'success' | 'info' | 'warning' | 'error' </span></td>
-        <td><span> 'default' </span></td>
-        <th>按钮的类型</th>
-      </tr>
-      <tr>
-        <td>type</td>
-        <td><span> 'default' | 'tertiary' | 'primary' | 'success' | 'info' | 'warning' | 'error' </span></td>
-        <td><span> 'default' </span></td>
-        <th>按钮的类型</th>
-      </tr>
-      <tr>
-        <td>type</td>
-        <td><span> 'default' | 'tertiary' | 'primary' | 'success' | 'info' | 'warning' | 'error' </span></td>
-        <td><span> 'default' </span></td>
-        <th>按钮的类型</th>
-      </tr>
-      <tr>
-        <td>type</td>
-        <td><span> 'default' | 'tertiary' | 'primary' | 'success' | 'info' | 'warning' | 'error' </span></td>
-        <td><span> 'default' </span></td>
-        <th>按钮的类型</th>
+        <td>style</td>
+        <td><span> CSSProperties </span></td>
+        <td><span> - </span></td>
+        <th>设置图标的样式</th>
       </tr>
     </table>
 
-    <h3>Button Slots</h3>
+    <h3>Icon Slots</h3>
   </div>
 </template>
 

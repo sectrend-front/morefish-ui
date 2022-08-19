@@ -14,9 +14,8 @@ const setStyle = () => {
   const styleObj: IHTMLAttr = {}
   if (props.size && Number(props.size)) styleObj.fontSize = `${Number(props.size)}px`
   if (props.color) styleObj.color = props.color
-  console.log(props.rotate)
   if (props.rotate && Number(props.rotate)) styleObj.transform = `rotate(${props.rotate}deg)`
-  console.log(styleObj)
+  if (props.spin) styleObj.animation = 'icon-rotate-360 1s linear infinite'
   return styleObj
 }
 </script>

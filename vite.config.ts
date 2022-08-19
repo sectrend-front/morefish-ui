@@ -31,7 +31,7 @@ export default defineConfig({
       entry: resolve(__dirname, 'packages/index.ts'),
       name: 'Morefish',
       fileName: (format) => `morefish.${format}.js`,
-      formats: ['es', 'umd', 'iife']
+      formats: ['es', 'umd']
     },
     rollupOptions: {
       external: ['vue'],
