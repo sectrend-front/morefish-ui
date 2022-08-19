@@ -1,0 +1,60 @@
+@import url('#/style/var.less');
+
+.mf-card {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid var(--mfBorderColor);
+  font-size: var(--mfFontSize);
+  font-weight: var(--mfFontWeight);
+
+  &-cover {
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: @cardPaddingTopPx @cardPaddingLeftPx;
+
+    &__main {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+
+  &-contents {
+    padding: 0 @cardPaddingLeftPx @cardPaddingTopPx @cardPaddingLeftPx;
+  }
+
+  &-footer {
+    margin: 0 @cardPaddingLeftPx @cardPaddingTopPx @cardPaddingLeftPx;
+  }
+
+  &-action {
+    padding: @cardPaddingTopPx @cardPaddingLeftPx;
+    background-color: var(--mfBorderColor);
+  }
+
+  &-split {
+    .mf-card-header,
+    .mf-card-header__custom {
+      border-bottom: 1px solid var(--mfBorderColor);
+    }
+
+    .mf-card-footer {
+      border-top: 1px solid var(--mfBorderColor);
+      padding-top: @cardPaddingTopPx;
+    }
+
+    .mf-card-contents {
+      padding: @cardPaddingTopPx @cardPaddingLeftPx;
+    }
+  }
+}

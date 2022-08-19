@@ -29,7 +29,7 @@ export default defineComponent({
       let classStr = ''
       classStr += `${Name}`
       classStr += props.type && Types.includes(props.type) ? ` ${Name}-type-${props.type}` : ''
-      classStr += Sizes.includes(props.size) ? ` ${Name}-size-${props.size}` : ''
+      classStr += props.size && Sizes.includes(props.size) ? ` ${Name}-size-${props.size}` : ''
       classStr += props.dashed ? ` ${Name}-dashed` : ''
       classStr += props.strong ? ` ${Name}-strong` : ''
       classStr += props.ghost ? ` ${Name}-ghost` : ''
@@ -50,7 +50,7 @@ export default defineComponent({
           )}
           {!props.loading && slots.icon && slots.icon()}
           {slots.default && <span class={`${Name}-span`}>{slots.default()}</span>}
-          {!props.loading && slots.iconAfter && slots.iconAfter()}
+          {!props.loading && slots['icon-after'] && slots['icon-after']()}
         </button>
       </>
     )

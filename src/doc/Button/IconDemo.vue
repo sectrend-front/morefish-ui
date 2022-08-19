@@ -6,7 +6,7 @@
     Edit
   </mf-button>
   <mf-button type="success">
-    <template #iconAfter>
+    <template #icon-after>
       <mf-icon :icon="Star" />
     </template>
     Star

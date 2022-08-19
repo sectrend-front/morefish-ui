@@ -2,13 +2,15 @@ import { App } from 'vue'
 import './style/theme.less'
 import MfButton from '#c/Button'
 import MfIcon from '#c/Icon'
-import MFConfigProvider from '#c/ConfigProvider'
+import MfConfigProvider from '#c/ConfigProvider'
+import MfCard from '#c/Card'
 import './utils/theme'
 
 const components = {
   MfButton,
   MfIcon,
-  MFConfigProvider
+  MfConfigProvider,
+  MfCard
 }
 
 const install = (app: App) => {
@@ -18,7 +20,7 @@ const install = (app: App) => {
   }
 }
 
-export { MfButton, MfIcon, MFConfigProvider }
+export { MfButton, MfIcon, MfConfigProvider, MfCard }
 export default {
   install
 }

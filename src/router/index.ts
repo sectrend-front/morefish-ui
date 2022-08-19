@@ -20,6 +20,11 @@ const router = createRouter({
           path: 'icon',
           name: 'icon',
           component: () => import('@/doc/Icon/index.vue')
+        },
+        {
+          path: 'card',
+          name: 'card',
+          component: () => import('@/doc/Card/index.vue')
         }
       ]
     },

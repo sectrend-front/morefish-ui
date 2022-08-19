@@ -4,15 +4,15 @@ import BaseDemo from './BaseDemo.vue'
 
 <template>
   <div class="doc-body">
-    <h1>Icon 图标</h1>
-    <p>采用SVG作为字体图标</p>
+    <h1>Card 卡片</h1>
+    <p>去码头整点🍟放进去</p>
     <hr />
 
     <h2>演示</h2>
 
     <h3>基础使用</h3>
     <p>给图标添加 <span>size</span> 和 <span>color</span> 属性</p>
-    <show-box path="Icon/BaseDemo">
+    <show-box path="Card/BaseDemo">
       <BaseDemo />
     </show-box>
 
@@ -21,7 +21,7 @@ import BaseDemo from './BaseDemo.vue'
       将自定义 <span>SVG</span> 保存在一个新的 <span>.vue</span> 文件并导出给图标组件使用。（确保设定了 <span>SVG</span> 的
       <span>viewBox</span> 属性）
     </p>
-    <show-box path="Icon/BaseDemo">
+    <show-box path="Card/BaseDemo">
       <BaseDemo />
     </show-box>
 
@@ -30,7 +30,7 @@ import BaseDemo from './BaseDemo.vue'
       将自定义 <span>SVG</span> 保存在一个新的 <span>.vue</span> 文件并导出给图标组件使用。（确保设定了 <span>SVG</span> 的
       <span>viewBox</span> 属性）
     </p>
-    <show-box path="Icon/BaseDemo">
+    <show-box path="Card/BaseDemo">
       <BaseDemo />
     </show-box>
 
