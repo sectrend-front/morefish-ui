@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import BaseDemo from './BaseDemo.vue'
+import CoverDemo from './CoverDemo.vue'
 </script>
 
 <template>
@@ -11,18 +12,15 @@ import BaseDemo from './BaseDemo.vue'
     <h2>演示</h2>
 
     <h3>基础使用</h3>
-    <p>给图标添加 <span>size</span> 和 <span>color</span> 属性</p>
+    <p>基本都用法</p>
     <show-box path="Card/BaseDemo">
       <BaseDemo />
     </show-box>
 
-    <h3>效果</h3>
-    <p>
-      将自定义 <span>SVG</span> 保存在一个新的 <span>.vue</span> 文件并导出给图标组件使用。（确保设定了 <span>SVG</span> 的
-      <span>viewBox</span> 属性）
-    </p>
-    <show-box path="Card/BaseDemo">
-      <BaseDemo />
+    <h3>封面</h3>
+    <p>卡片支持封面效果</p>
+    <show-box path="Card/CoverDemo">
+      <CoverDemo />
     </show-box>
 
     <h3>自定义图标</h3>

@@ -16,7 +16,7 @@ const setClass = () => {
 }
 </script>
 
-/** size 用style的padding写 */
+/** size 用style的padding写 每个对应样式*/
 
 <template>
   <div :class="setClass()">
