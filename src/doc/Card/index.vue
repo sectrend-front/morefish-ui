@@ -1,18 +1,21 @@
 <script setup lang="ts">
 import BaseDemo from './BaseDemo.vue'
 import CoverDemo from './CoverDemo.vue'
+import SlotDemo from './SlotDemo.vue'
+import SplitDemo from './SplitDemo.vue'
+import BorderedDemo from './BorderedDemo.vue'
 </script>
 
 <template>
   <div class="doc-body">
     <h1>Card 卡片</h1>
-    <p>去码头整点🍟放进去</p>
+    <p>去码头整点 🍟 放进去</p>
     <hr />
 
     <h2>演示</h2>
 
     <h3>基础使用</h3>
-    <p>基本都用法</p>
+    <p>基本的用法</p>
     <show-box path="Card/BaseDemo">
       <BaseDemo />
     </show-box>
@@ -23,13 +26,34 @@ import CoverDemo from './CoverDemo.vue'
       <CoverDemo />
     </show-box>
 
-    <h3>自定义图标</h3>
-    <p>
-      将自定义 <span>SVG</span> 保存在一个新的 <span>.vue</span> 文件并导出给图标组件使用。（确保设定了 <span>SVG</span> 的
-      <span>viewBox</span> 属性）
-    </p>
-    <show-box path="Card/BaseDemo">
-      <BaseDemo />
+    <h3>插槽</h3>
+    <p>卡片封装了很多插槽</p>
+    <show-box path="Card/SlotDemo">
+      <SlotDemo />
+    </show-box>
+
+    <h3>分段</h3>
+    <p>内容区域内会出现分割线</p>
+    <show-box path="Card/SplitDemo">
+      <SplitDemo />
+    </show-box>
+
+    <h3>无边框</h3>
+    <p>可以对边框使用大消失之术</p>
+    <show-box path="Card/BorderedDemo">
+      <BorderedDemo />
+    </show-box>
+
+    <h3>可悬浮</h3>
+    <p>内容区域内会出现分割线</p>
+    <show-box path="Card/SplitDemo">
+      <SplitDemo />
+    </show-box>
+
+    <h3>嵌入效果</h3>
+    <p>在白天/黑夜模式下与父级容器区分</p>
+    <show-box path="Card/SplitDemo">
+      <SplitDemo />
     </show-box>
 
     <hr />

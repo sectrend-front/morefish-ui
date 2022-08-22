@@ -5,18 +5,21 @@ import { Name } from './const'
 
 const props = defineProps({
   title: String,
-  split: Boolean
+  split: Boolean,
+  bordered: {
+    type: Boolean,
+    default: true
+  }
 })
 const slots = useSlots()
 
 const setClass = () => {
   let str = Name
   str += props.split ? ` ${Name}-split` : ''
+  str += props.bordered ? ' ' : ` ${Name}-border-none`
   return str
 }
 </script>
-
-/** size 用style的padding写 每个对应样式*/
 
 <template>
   <div :class="setClass()">
