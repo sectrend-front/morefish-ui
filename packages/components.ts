@@ -1,0 +1,5 @@
+export { default as Button } from '#c/Button'
+export { default as Icon } from '#c/Icon'
+// export { default as ConfigProvider } from '#c/ConfigProvider'
+export { default as Card } from '#c/Card'
+export { default as Tabs, TabPane } from '#c/Tabs'

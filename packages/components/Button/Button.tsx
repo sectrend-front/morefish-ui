@@ -24,6 +24,7 @@ export default defineComponent({
     color: String
   },
   emits: ['click'],
+  name: Name,
   setup(props, { slots, emit }) {
     const setClass = () => {
       let classStr = ''

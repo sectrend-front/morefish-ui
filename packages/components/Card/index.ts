@@ -1,11 +1,9 @@
-import { App } from 'vue'
 import Card from './Card.vue'
 import { Name } from './const'
+import { withInstall } from '#/utils/withInstall'
 
 Card.name = Name
 
-Card.install = (app: App) => {
-  app.component(Card.name, Card)
-}
+const MfCard = withInstall(Card)
 
-export default Card
+export default MfCard

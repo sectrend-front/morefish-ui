@@ -17,14 +17,14 @@ const router = createRouter({
           component: () => import('@/doc/Button/index.vue')
         },
         {
-          path: 'icon',
-          name: 'icon',
-          component: () => import('@/doc/Icon/index.vue')
-        },
-        {
           path: 'card',
           name: 'card',
           component: () => import('@/doc/Card/index.vue')
+        },
+        {
+          path: 'tabs',
+          name: 'tabs',
+          component: () => import('@/doc/Tabs/index.vue')
         }
       ]
     },

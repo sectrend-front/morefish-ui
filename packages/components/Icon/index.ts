@@ -1,11 +1,9 @@
-import { App } from 'vue'
 import Icon from './Icon.vue'
 import { Name } from './const'
+import { withInstall } from '#/utils/withInstall'
 
 Icon.name = Name
 
-Icon.install = (app: App) => {
-  app.component(Icon.name, Icon)
-}
+const MfIcon = withInstall(Icon)
 
-export default Icon
+export default MfIcon

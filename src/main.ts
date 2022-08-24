@@ -9,6 +9,7 @@ import 'highlight.js/lib/common'
 import hljsVuePlugin from '@highlightjs/vue-plugin'
 import ShowBox from '@/components/ShowBox/ShowBox.vue'
 
+// import { Button, Icon, Tabs, Card } from '../packages'
 import MorefishUi from '../packages'
 import '#/style/theme.less'
 
@@ -22,5 +23,9 @@ const app = createApp(App)
 app.use(hljsVuePlugin)
 app.use(router)
 app.use(MorefishUi)
+// app.use(Button)
+// app.use(Icon)
+// app.use(Tabs)
+// app.use(Card)
 app.component('show-box', ShowBox)
 app.mount('#app')

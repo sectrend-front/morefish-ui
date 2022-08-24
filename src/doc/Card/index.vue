@@ -4,6 +4,8 @@ import CoverDemo from './CoverDemo.vue'
 import SlotDemo from './SlotDemo.vue'
 import SplitDemo from './SplitDemo.vue'
 import BorderedDemo from './BorderedDemo.vue'
+import HoverDemo from './HoverDemo.vue'
+import EmbedDemo from './EmbedDemo.vue'
 </script>
 
 <template>
@@ -45,15 +47,15 @@ import BorderedDemo from './BorderedDemo.vue'
     </show-box>
 
     <h3>可悬浮</h3>
-    <p>内容区域内会出现分割线</p>
-    <show-box path="Card/SplitDemo">
-      <SplitDemo />
+    <p>鼠标移上去看看</p>
+    <show-box path="Card/HoverDemo">
+      <HoverDemo />
     </show-box>
 
     <h3>嵌入效果</h3>
-    <p>在白天/黑夜模式下与父级容器区分</p>
-    <show-box path="Card/SplitDemo">
-      <SplitDemo />
+    <p>与父级容器划清界限</p>
+    <show-box path="Card/EmbedDemo">
+      <EmbedDemo />
     </show-box>
 
     <hr />

@@ -6,6 +6,8 @@ import { Name } from './const'
 const props = defineProps({
   title: String,
   split: Boolean,
+  hoverable: Boolean,
+  embedded: Boolean,
   bordered: {
     type: Boolean,
     default: true
@@ -17,6 +19,8 @@ const setClass = () => {
   let str = Name
   str += props.split ? ` ${Name}-split` : ''
   str += props.bordered ? ' ' : ` ${Name}-border-none`
+  str += props.hoverable ? ` ${Name}-hoverable` : ''
+  str += props.embedded ? ` ${Name}-embedded` : ''
   return str
 }
 </script>

@@ -19,13 +19,16 @@ export default defineConfig({
     hmr: true,
     host: '0.0.0.0'
   },
+  preview: {
+    port: 4174
+  },
   define: {
     __VUE_OPTIONS_API__: false
   },
   build: {
     assetsDir: 'static',
     cssCodeSplit: true,
-    sourcemap: false,
+    sourcemap: true,
     emptyOutDir: true,
     lib: {
       entry: resolve(__dirname, 'packages/index.ts'),

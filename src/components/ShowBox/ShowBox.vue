@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { readSouceCode } from './readSouceCode'
+import { readSouceCode } from '@/utils/readSouceCode'
 
 const props = defineProps({
   path: String
