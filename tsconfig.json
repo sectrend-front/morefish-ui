@@ -23,7 +23,15 @@
     "declaration": true, // 生成相关的 '.d.ts' 文件
     "declarationDir": "./dist/types" //'.d.ts' 文件输出目录
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "packages/**/*.vue", "packages/**/*.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "packages/**/*.vue",
+    "packages/**/*.ts",
+    "packages/components/Space/Space.tsx"
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"

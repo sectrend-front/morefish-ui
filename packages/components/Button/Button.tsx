@@ -43,7 +43,11 @@ export default defineComponent({
 
     return () => (
       <>
-        <button class={setClass()} onClick={(evt: MouseEvent) => emit('click', evt)} disabled={props.disabled || props.loading}>
+        <button
+          class={setClass()}
+          onClick={(evt: MouseEvent) => emit('click', evt)}
+          disabled={props.disabled || props.loading}
+        >
           {props.loading && (
             <i class={`${Name}-loading-icon`}>
               <Loading />

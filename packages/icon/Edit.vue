@@ -1,5 +1,13 @@
 <template>
-  <svg viewBox="64 64 896 896" focusable="false" data-icon="form" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+  <svg
+    viewBox="64 64 896 896"
+    focusable="false"
+    data-icon="form"
+    width="1em"
+    height="1em"
+    fill="currentColor"
+    aria-hidden="true"
+  >
     <path
       d="M904 512h-56c-4.4 0-8 3.6-8 8v320H184V184h320c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V520c0-4.4-3.6-8-8-8z"
     ></path>

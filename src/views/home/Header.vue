@@ -78,7 +78,12 @@ onMounted(() => {
       </div>
     </div>
     <div class="systemBox">
-      <div v-for="(item, index) in system" :key="index" class="system" :class="{ systemActive: systemCurrent === index }">
+      <div
+        v-for="(item, index) in system"
+        :key="index"
+        class="system"
+        :class="{ systemActive: systemCurrent === index }"
+      >
         <span @click="systemClick(index)">{{ item }}</span>
       </div>
       <label class="switch" @click="themeSwitch">

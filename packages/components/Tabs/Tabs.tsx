@@ -1,6 +1,15 @@
-import { type } from 'os'
-import { defineComponent, watch, ref } from 'vue'
-import { Name, PaneName } from './const'
+import {
+  defineComponent,
+  watch,
+  ref,
+  renderSlot,
+  type RendererElement,
+  type RendererNode,
+  VNode,
+  getCurrentInstance,
+  onMounted
+} from 'vue'
+import { Name, PaneName, PaneProps } from './const'
 
 export default defineComponent({
   name: Name,
@@ -11,18 +20,18 @@ export default defineComponent({
     }
   },
   setup(props, { slots }) {
-    const paneSlotList: VNode[] = []
-    const navList = ref([])
+    const paneSlotList: VNode<RendererNode, RendererElement>[] = []
+    console.log('zzz')
+
+    const navList = ref<PaneProps[]>([])
+
     const getPaneInfo = () => {
       if (!slots.default) return null
       console.log(slots.default())
-      slots.default().forEach(
-        (item) => {
-          console.log(item)
-        }
-        // typeof item.type === 'object' && item.type.hasOwnProperty('name') && item.type.name === PaneName ? paneSlotList.push(item) : ''
-      )
-      // console.log(paneSlotList)
+
+      // paneSlotList = slots.default().filter((item) => (item.type as any).name && (item.type as any).name === PaneName)
+      // navList.value = paneSlotList.map((item) => item.props)
+      // console.log(navList.value)
     }
 
     getPaneInfo()
@@ -34,10 +43,19 @@ export default defineComponent({
       }
     )
 
+    onMounted(() => {
+      const instance = getCurrentInstance()
+      console.log(instance)
+    })
+
     return () => (
       <div class={`${Name}`}>
-        <div class={`${Name}-nav`}> {props.activeKey} </div>
-        <div class={`${Name}-content`}> {slots.default && slots.default()} </div>
+        <div class={`${Name}-nav`}>
+          {navList.value.map(({ name, tab }) => (
+            <div key={name}>{tab}</div>
+          ))}
+        </div>
+        <div class={`${Name}-content`}> {renderSlot(slots, 'default')} </div>
       </div>
     )
   }

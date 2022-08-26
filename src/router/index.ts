@@ -25,6 +25,11 @@ const router = createRouter({
           path: 'tabs',
           name: 'tabs',
           component: () => import('@/doc/Tabs/index.vue')
+        },
+        {
+          path: 'space',
+          name: 'space',
+          component: () => import('@/doc/Space/index.vue')
         }
       ]
     },
