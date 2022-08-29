@@ -1,5 +1,5 @@
 <template>
-  <mf-space :size="[10, 'zz']">
+  <mf-space :wrap="false">
     <mf-button>Manta Style</mf-button>
     <mf-button>Stygian Desolator</mf-button>
     <mf-button>Linken's Sphere</mf-button>
@@ -11,3 +11,9 @@
 import { ref } from 'vue'
 const list = ref<string[]>(['Black King Bar', 'Eye Of Skadi', 'Radiance'])
 </script>
+
+<style scoped>
+.mf-space {
+  width: 250px;
+}
+</style>

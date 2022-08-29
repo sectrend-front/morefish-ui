@@ -1,31 +1,36 @@
-import { type PropType } from 'vue'
+import { extractPropsArr } from '#/utils/extractPropsArr'
+import { ExtractPropTypes } from 'vue'
 
-export type PJustify = 'start' | 'end' | 'center' | 'space-around' | 'space-between' | 'space-evenly'
-export type PAlign = 'start' | 'end' | 'center' | 'baseline' | 'stretch' | undefined
-export type PSize = [number, number] | [number, number, number] | [number, number, number, number]
+export const SpaceJustifyArr = extractPropsArr(['start', 'end', 'center', 'space-around', 'space-between', 'space-evenly'])
+export const SpacePAlignArr = extractPropsArr(['start', 'end', 'center', 'baseline', 'stretch'])
+export type SpaceSize = number | [number] | [number, number]
 
 export function getProps() {
   return {
     vertical: Boolean,
     justify: {
-      deafult: 'start',
-      type: String as PropType<PJustify>
+      default: 'start',
+      validator: (val: string) => SpaceJustifyArr.includes(val)
     },
     align: {
       deafult: undefined,
-      type: String as PropType<PAlign>
+      validator: (val: string) => SpacePAlignArr.includes(val)
     },
     wrap: {
       default: true,
       type: Boolean
     },
-    'wrap-item': {
-      default: true,
-      type: Boolean
+    // 'wrap-item': {
+    //   default: true,
+    //   type: Boolean
+    // },
+    size: {
+      default: 8,
+      validator: (val: SpaceSize) =>
+        typeof val === 'number' ||
+        (Array.isArray(val) && val.length >= 1 && val.length <= 2 && val.every((item) => typeof item === 'number'))
     }
-    // size: {
-    //   default: 8,
-    //   type: [Number, Array as PropType<PSize>]
-    // }
   }
 }
+
+export type SpaceProps = Partial<ExtractPropTypes<ReturnType<typeof getProps>>>

@@ -1,12 +1,12 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>
+  <mf-space>
     <mf-button dashed>Deafult</mf-button>
     <mf-button type="primary" dashed>Primary</mf-button>
     <mf-button type="success" dashed>Success</mf-button>
     <mf-button type="info" dashed>Info</mf-button>
     <mf-button type="warning" dashed>Warning</mf-button>
     <mf-button type="danger" dashed>Danger</mf-button>
-  </div>
+  </mf-space>
 </template>

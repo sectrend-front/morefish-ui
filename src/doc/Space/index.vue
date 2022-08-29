@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import BaseDemo from './BaseDemo.vue'
+import VerticalDemo from './VerticalDemo.vue'
+import EndDemo from './EndDemo.vue'
+import BetweenDemo from './BetweenDemo.vue'
+import AroundDemo from './AroundDemo.vue'
+import CenterDemo from './CenterDemo.vue'
 const name = 'Space'
 </script>
 
@@ -17,19 +22,29 @@ const name = 'Space'
     </show-box>
 
     <h3>垂直</h3>
-    <show-box :path="`${name}/BaseDemo`"> </show-box>
+    <show-box :path="`${name}/VerticalDemo`">
+      <VerticalDemo />
+    </show-box>
 
     <h3>尾部</h3>
-    <show-box :path="`${name}/BaseDemo`"> </show-box>
+    <show-box :path="`${name}/EndDemo`">
+      <EndDemo />
+    </show-box>
 
     <h3>间隙</h3>
-    <show-box :path="`${name}/BaseDemo`"> </show-box>
+    <show-box :path="`${name}/BetweenDemo`">
+      <BetweenDemo />
+    </show-box>
 
     <h3>空间围绕</h3>
-    <show-box :path="`${name}/BaseDemo`"> </show-box>
+    <show-box :path="`${name}/AroundDemo`">
+      <AroundDemo />
+    </show-box>
 
-    <h3>从中间</h3>
-    <show-box :path="`${name}/BaseDemo`"> </show-box>
+    <h3>中间</h3>
+    <show-box :path="`${name}/CenterDemo`">
+      <CenterDemo />
+    </show-box>
 
     <hr />
     <h2>API</h2>
@@ -45,14 +60,52 @@ const name = 'Space'
         </tr>
       </thead>
       <tr>
-        <td>style</td>
+        <td>justify</td>
+        <td><span> </span></td>
+        <td><span> - </span></td>
+        <th>水平排列方式</th>
+      </tr>
+      <tr>
+        <td>align</td>
         <td><span> CSSProperties </span></td>
         <td><span> - </span></td>
-        <th>设置图标的样式</th>
+        <th>垂直排列方式</th>
+      </tr>
+      <tr>
+        <td>size</td>
+        <td><span> CSSProperties </span></td>
+        <td><span> - </span></td>
+        <th>为数字时，是水平和垂直间距；为数组时，是 [水平间距, 垂直间距]</th>
+      </tr>
+      <tr>
+        <td>vertical</td>
+        <td><span> CSSProperties </span></td>
+        <td><span> - </span></td>
+        <th>是否垂直布局</th>
+      </tr>
+      <tr>
+        <td>wrap</td>
+        <td><span> CSSProperties </span></td>
+        <td><span> true </span></td>
+        <th>是否超出换行</th>
       </tr>
     </table>
 
-    <h3>Icon Slots</h3>
+    <h3>Space Slots</h3>
+    <table class="doc-table">
+      <thead>
+        <tr>
+          <th>名称</th>
+          <th>参数</th>
+          <th>说明</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>default</td>
+        <td><span> () </span></td>
+        <th>内容</th>
+      </tr>
+    </table>
   </div>
 </template>
 
