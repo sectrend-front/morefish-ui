@@ -30,6 +30,11 @@ const router = createRouter({
           path: 'space',
           name: 'space',
           component: () => import('@/doc/Space/index.vue')
+        },
+        {
+          path: 'tag',
+          name: 'tag',
+          component: () => import('@/doc/Tag/index.vue')
         }
       ]
     },

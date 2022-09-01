@@ -42,14 +42,14 @@ const searchBlur = (e: any) => {
 // theme切换
 const themeSwitch = () => {
   if (!theme.value) {
-    document.getElementsByTagName('html')[0].className = 'dark'
+    document.getElementsByTagName('html')[0].className = 'mf-theme__dark'
   } else {
     document.getElementsByTagName('html')[0].className = ''
   }
 }
 onMounted(() => {
   if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.getElementsByTagName('html')[0].className = 'dark'
+    document.getElementsByTagName('html')[0].className = 'mf-theme__dark'
     theme.value = true
   }
   window.addEventListener('click', searchBlur)

@@ -9,13 +9,14 @@
   --mfBorderColor: rgb(226, 226, 230);
   --mfFontWeight: @fontWeight;
   --mfTransition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  --mfBaseRadius: 3px;
   transition: var(--mfTransition);
   color: var(--textColor);
   border-color: var(--mfBorderColor);
   background-color: var(--themeColor);
 }
 
-html.dark {
+html.mf-theme__dark {
   --themeColor: #242424;
   --textColor: @fontColorWhite;
   --mfBorderColor: rgba(255, 255, 255, 0.09);

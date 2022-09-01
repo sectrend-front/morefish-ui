@@ -15,7 +15,6 @@ export const withInstall = <T, E extends Record<string, any>>(main: T, extra?: E
    */
   if (extra) {
     for (const [key, comp] of Object.entries(extra)) {
-      console.log(key)
       ;(main as any)[key] = comp
     }
   }

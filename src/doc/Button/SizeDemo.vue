@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <mf-space align="center">
+  <mf-space align="baseline">
     <mf-button type="primary" size="small">Small</mf-button>
     <mf-button>Deafult</mf-button>
     <mf-button type="success" size="large">Large</mf-button>

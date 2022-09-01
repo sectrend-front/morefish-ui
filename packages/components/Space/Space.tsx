@@ -47,8 +47,7 @@ export default defineComponent({
     }
     return () => (
       <div class={`${Name}`} style={setStyle()}>
-        {' '}
-        {renderSlots()}{' '}
+        {renderSlots()}
       </div>
     )
   }

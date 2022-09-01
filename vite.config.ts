@@ -39,6 +39,7 @@ export default defineConfig({
     rollupOptions: {
       external: ['vue'],
       output: {
+        assetFileNames: 'assets/[name].css', // css build name
         globals: {
           vue: 'Vue'
         }
