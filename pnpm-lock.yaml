@@ -24,6 +24,7 @@ specifiers:
   eslint-plugin-vue: ^9.3.0
   happy-dom: ^6.0.4
   highlight.js: ^11.6.0
+  husky: ^8.0.1
   less: ^4.1.3
   pinia: ^2.0.17
   prettier: ^2.7.1
@@ -64,6 +65,7 @@ devDependencies:
   eslint-plugin-vue: 9.3.0_eslint@8.21.0
   happy-dom: 6.0.4
   highlight.js: 11.6.0
+  husky: 8.0.1
   less: 4.1.3
   prettier: 2.7.1
   ts-node: 10.9.1_cvilj4l3ytrlnvtlqw3tscihve
@@ -3527,6 +3529,13 @@ packages:
       { integrity: sha512-bqX0XTF6fnXSQcEJ2Iuyr75yVakyjIDCqroJQ/aHfSdlM743Cwqoi2nDYMzLGWUcuTWGWy8AAvOKXTfiv6q9RA== }
     dependencies:
       '@types/node': 10.17.60
+    dev: true
+
+  /husky/8.0.1:
+    resolution:
+      { integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw== }
+    engines: { node: '>=14' }
+    hasBin: true
     dev: true
 
   /iconv-lite/0.4.24:

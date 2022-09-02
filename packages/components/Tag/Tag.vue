@@ -4,10 +4,8 @@ import './style/index.less'
 import { getProps } from './src/getProps'
 import { setClass } from './src/setClass'
 import { useSlots } from 'vue'
+
 const props = defineProps(getProps())
-
-console.log(props)
-
 const emit = defineEmits(['close'])
 const slots = useSlots()
 </script>

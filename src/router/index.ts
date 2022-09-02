@@ -35,6 +35,11 @@ const router = createRouter({
           path: 'tag',
           name: 'tag',
           component: () => import('@/doc/Tag/index.vue')
+        },
+        {
+          path: 'divider',
+          name: 'divider',
+          component: () => import('@/doc/Divider/index.vue')
         }
       ]
     },
