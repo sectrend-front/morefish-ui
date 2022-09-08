@@ -1,4 +1,7 @@
-const Types = ['primary', 'success', 'info', 'warning', 'danger']
+import { extractPropsArr } from '#/utils/extractPropsArr'
+
+const Types = extractPropsArr(['primary', 'success', 'info', 'warning', 'danger'])
 const Name = 'mf-button'
-const Sizes = ['large', 'small']
+const Sizes = extractPropsArr(['large', 'small'])
+
 export { Types, Name, Sizes }

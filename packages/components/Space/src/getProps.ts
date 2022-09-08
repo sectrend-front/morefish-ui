@@ -1,9 +1,5 @@
-import { extractPropsArr } from '#/utils/extractPropsArr'
 import { ExtractPropTypes } from 'vue'
-
-export const SpaceJustifyArr = extractPropsArr(['start', 'end', 'center', 'space-around', 'space-between', 'space-evenly'])
-export const SpacePAlignArr = extractPropsArr(['start', 'end', 'center', 'baseline', 'stretch'])
-export type SpaceSize = number | [number] | [number, number]
+import { SpaceJustifyArr, SpacePAlignArr, type SpaceSize } from '../const'
 
 export function getProps() {
   return {
@@ -20,10 +16,6 @@ export function getProps() {
       default: true,
       type: Boolean
     },
-    // 'wrap-item': {
-    //   default: true,
-    //   type: Boolean
-    // },
     size: {
       default: 8,
       validator: (val: SpaceSize) =>

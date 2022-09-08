@@ -15,25 +15,28 @@ await fs.mkdir(`${pathName}/style`, (err) => {
 console.log('create success!')
 
 const fileList = {
-  'index.ts': `import ${name} from './${name}'
-                  import { withInstall } from '#/utils/withInstall'
-                  
-                  ${name}.name = 'mf-${name.toLowerCase()}'
-                  export const Mf${name} = withInstall(${name})
-                  export default Mf${name}`,
-  'const.ts': `const Name = 'mf-${name.toLowerCase()}'
+  'index.ts': ` import ${name} from './${name}'
+                import { withInstall } from '#/utils/withInstall'
+                                  
+                ${name}.name = 'mf-${name.toLowerCase()}'
+                export const Mf${name} = withInstall(${name})
+                export default Mf${name}`,
 
-                  export { Name }`,
+  'const.ts': ` const Name = 'mf-${name.toLowerCase()}'
+ 
+                export { Name }`,
+
   'style/index.less': `.mf-${name.toLowerCase()}{}`,
+
   'src/getProps.ts': `import { extractPropsArr } from '#/utils/extractPropsArr'
-                          import { ExtractPropTypes } from 'vue'
+                      import { ExtractPropTypes } from 'vue'
 
-                          export function getProps() {
-                            return {}
-                          }
+                      export function getProps() {
+                         return {}
+                      }
+                      export type ${name}Props = Partial<ExtractPropTypes<ReturnType<typeof getProps>>>`,
 
-                          export type ${name}Props = Partial<ExtractPropTypes<ReturnType<typeof getProps>>>`,
-  'src/setClass.ts': `import { Name } from '../const'
+  'src/setClass.ts': ` import { Name } from '../const'
                        import { ${name}Props} from './getProps'
                       
                        export function setClass(props: ${name}Props) {
