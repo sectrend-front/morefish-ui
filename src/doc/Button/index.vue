@@ -94,25 +94,25 @@ import LoadingDemo from './LoadingDemo.vue'
         <td>type</td>
         <td><span> 'default' | 'tertiary' | 'primary' | 'success' | 'info' | 'warning' | 'error' </span></td>
         <td><span> 'default' </span></td>
-        <th>按钮的类型</th>
+        <td>按钮的类型</td>
       </tr>
       <tr>
         <td>type</td>
         <td><span> 'default' | 'tertiary' | 'primary' | 'success' | 'info' | 'warning' | 'error' </span></td>
         <td><span> 'default' </span></td>
-        <th>按钮的类型</th>
+        <td>按钮的类型</td>
       </tr>
       <tr>
         <td>type</td>
         <td><span> 'default' | 'tertiary' | 'primary' | 'success' | 'info' | 'warning' | 'error' </span></td>
         <td><span> 'default' </span></td>
-        <th>按钮的类型</th>
+        <td>按钮的类型</td>
       </tr>
       <tr>
         <td>type</td>
         <td><span> 'default' | 'tertiary' | 'primary' | 'success' | 'info' | 'warning' | 'error' </span></td>
         <td><span> 'default' </span></td>
-        <th>按钮的类型</th>
+        <td>按钮的类型</td>
       </tr>
     </table>
 

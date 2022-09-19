@@ -63,31 +63,31 @@ const name = 'Space'
         <td>justify</td>
         <td><span> </span></td>
         <td><span> - </span></td>
-        <th>水平排列方式</th>
+        <td>水平排列方式</td>
       </tr>
       <tr>
         <td>align</td>
         <td><span> CSSProperties </span></td>
         <td><span> - </span></td>
-        <th>垂直排列方式</th>
+        <td>垂直排列方式</td>
       </tr>
       <tr>
         <td>size</td>
         <td><span> CSSProperties </span></td>
         <td><span> - </span></td>
-        <th>为数字时，是水平和垂直间距；为数组时，是 [水平间距, 垂直间距]</th>
+        <td>为数字时，是水平和垂直间距；为数组时，是 [水平间距, 垂直间距]</td>
       </tr>
       <tr>
         <td>vertical</td>
         <td><span> CSSProperties </span></td>
         <td><span> - </span></td>
-        <th>是否垂直布局</th>
+        <td>是否垂直布局</td>
       </tr>
       <tr>
         <td>wrap</td>
         <td><span> CSSProperties </span></td>
         <td><span> true </span></td>
-        <th>是否超出换行</th>
+        <td>是否超出换行</td>
       </tr>
     </table>
 

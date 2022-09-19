@@ -75,7 +75,7 @@ import EmbedDemo from './EmbedDemo.vue'
         <td>style</td>
         <td><span> CSSProperties </span></td>
         <td><span> - </span></td>
-        <th>设置图标的样式</th>
+        <td>设置图标的样式</td>
       </tr>
     </table>
 
