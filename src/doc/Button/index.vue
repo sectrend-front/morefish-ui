@@ -13,7 +13,7 @@ import LoadingDemo from './LoadingDemo.vue'
   <div class="doc-body">
     <h1>Button 按钮</h1>
     <p>触发相关操作</p>
-    <hr />
+    <br />
 
     <h2>演示</h2>
 
@@ -77,7 +77,7 @@ import LoadingDemo from './LoadingDemo.vue'
       <LoadingDemo />
     </show-box>
 
-    <hr />
+    <br />
     <h2>API</h2>
 
     <h3>Button Props</h3>
