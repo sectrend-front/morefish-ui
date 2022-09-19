@@ -11,6 +11,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  --docTableBorderColor: #efeff5;
+  --docTableCodeBgColor: #f4f4f8;
+  --docTableHeadBgColor: #fafafc;
 }
 
 #app {
@@ -41,18 +44,18 @@
     text-align: left;
 
     border-spacing: 0;
-    border: 1px solid #efeff5;
+    border: 1px solid var(--docTableBorderColor);
 
     span {
-      background-color: #f4f4f8;
+      background-color: var(--docTableCodeBgColor);
       padding: 2px 5px;
       border-radius: 3px;
     }
 
     tr {
       th {
-        border-bottom: 1px solid #efeff5;
-        background-color: #fafafc;
+        border-bottom: 1px solid var(--docTableBorderColor);
+        background-color: var(--docTableHeadBgColor);
         font-weight: 600;
       }
       th,
