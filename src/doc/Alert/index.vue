@@ -30,18 +30,18 @@ import IconDemo from './IconDemo.vue'
 
     <br />
 
-    <h3>含有辅助性文字</h3>
-    <p>含有辅助性文字介绍的警告提示。</p>
-    <show-box path="Alert/DescriptionDemo">
-      <DescriptionDemo />
-    </show-box>
-
-    <br />
-
     <h3>可以关闭</h3>
     <p>显示关闭按钮，点击可以关闭告警提示</p>
     <show-box path="Alert/CloseDemo">
       <CloseDemo />
+    </show-box>
+
+    <br />
+
+    <h3>含有辅助性文字</h3>
+    <p>含有辅助性文字介绍的警告提示。</p>
+    <show-box path="Alert/DescriptionDemo">
+      <DescriptionDemo />
     </show-box>
 
     <br />
