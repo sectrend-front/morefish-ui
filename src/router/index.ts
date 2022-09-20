@@ -12,6 +12,11 @@ const router = createRouter({
       name: 'document',
       children: [
         {
+          path: 'alert',
+          name: 'alert',
+          component: () => import('@/doc/Alert/index.vue')
+        },
+        {
           path: 'button',
           name: 'button',
           component: () => import('@/doc/Button/index.vue')
