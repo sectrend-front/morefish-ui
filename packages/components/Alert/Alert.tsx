@@ -17,16 +17,16 @@ export default defineComponent({
     }
     const cClass = computed(() => {
       if (!visible.value) {
-        return [AlertTypes.includes(props.type) ? `mf-alert-${props.type} ` : 'mf-alert-info']
+        return [AlertTypes.includes(props.type) ? `mf-alert mf-alert-${props.type} ` : 'mf-alert-info']
       }
       if (slots.description) {
         return [
           AlertTypes.includes(props.type)
-            ? `mf-alert-${props.type} mf-alert-with-description`
-            : 'mf-alert-info mf-alert-with-description'
+            ? `mf-alert mf-alert-${props.type} mf-alert-with-description`
+            : 'mf-alert mf-alert-info mf-alert-with-description'
         ]
       }
-      return [AlertTypes.includes(props.type) ? `mf-alert-${props.type}` : 'mf-alert-info']
+      return [AlertTypes.includes(props.type) ? `mf-alert mf-alert-${props.type}` : 'mf-alert mf-alert-info']
     })
 
     return () => (
