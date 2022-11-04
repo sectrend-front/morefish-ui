@@ -19,12 +19,14 @@
   "exports": {
     ".": {
       "import": "./dist/morefish.es.js",
-      "require": "./dist/morefish.umd.js"
+      "require": "./dist/morefish.umd.js",
+      "types": "./dist/index.d.ts"
     },
     "./dist/style.css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "package.json",
