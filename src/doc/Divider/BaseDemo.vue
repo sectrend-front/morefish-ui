@@ -1,5 +1,5 @@
 <template>
-  啊
-  <mf-divider title-place="left" dashed />
-  啊
+  Hello~
+  <mf-divider />
+  你好~
 </template>

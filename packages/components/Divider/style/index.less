@@ -1,2 +1,49 @@
+@import url('#/style/var.less');
+
+.mf-divider:not(.mf-divider--vertical) {
+  margin-top: var(--mfMargin);
+  margin-bottom: var(--mfMargin);
+  width: 100%;
+
+  .mf-divider__line {
+    width: 100%;
+  }
+
+  .mf-divider__line--left,
+  .mf-divider__line--right {
+    width: @btnHeight;
+  }
+
+  .mf-divider__text {
+    padding: 0 (@fontSize / 2);
+    font-size: @fontSizeLarge;
+    white-space: nowrap;
+  }
+}
+
 .mf-divider {
+  position: relative;
+  display: flex;
+
+  box-sizing: border-box;
+  font-size: @fontSize;
+  color: var(--textColor);
+  transition: var(--mfTransition);
+  align-items: center;
+
+  .mf-divider__line {
+    border: none;
+    transition: var(--mfTransition);
+    height: 1px;
+    margin: 0;
+    background-color: var(--textColor);
+  }
+}
+
+.mf-divider--vertical {
+  height: 12px;
+  margin: 0 (@fontSize);
+  display: inline-block;
+  width: 1px;
+  background-color: var(--textColor);
 }

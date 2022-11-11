@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import BaseDemo from './BaseDemo.vue'
+import VerticalDemo from './VerticalDemo.vue'
+import TitleDemo from './TitleDemo.vue'
 const name = 'Divider'
 </script>
 
@@ -16,10 +18,20 @@ const name = 'Divider'
       <BaseDemo />
     </show-box>
 
+    <h3>标题</h3>
+    <show-box :path="`${name}/TitleDemo`">
+      <TitleDemo />
+    </show-box>
+
+    <h3>垂直</h3>
+    <show-box :path="`${name}/VerticalDemo`">
+      <VerticalDemo />
+    </show-box>
+
     <hr />
     <h2>API</h2>
 
-    <h3>Icon Props</h3>
+    <h3>{{ name }} Props</h3>
     <table class="doc-table">
       <thead>
         <tr>
@@ -61,7 +73,7 @@ const name = 'Divider'
       </tr>
     </table>
 
-    <h3>Space Slots</h3>
+    <h3>{{ name }} Slots</h3>
     <table class="doc-table">
       <thead>
         <tr>
