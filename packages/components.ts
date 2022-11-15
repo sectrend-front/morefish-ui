@@ -6,6 +6,7 @@ export { default as Tabs, TabPane } from '#c/Tabs'
 export { default as Space } from '#c/Space'
 export { default as Tag } from '#c/Tag'
 export { default as Divider } from '#c/Divider'
+export { default as Spin } from '#c/Spin'
 
 // 组件参考
 // https://github.com/57code/sheep-ui/blob/master/src/tree/src/tree-type.ts

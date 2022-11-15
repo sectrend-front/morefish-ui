@@ -1,0 +1,58 @@
+@import url(#/style/var.less);
+@import url(#/style/common.less);
+
+.mf-spin {
+  position: relative;
+  display: inline-block;
+
+  .mf-spin-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .mf-spin-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mf-spin-icon__rotate {
+      animation: icon-rotate-360 1.5s linear infinite;
+    }
+
+    .mf-spin-description {
+      margin-top: 10px;
+      font-weight: @fontWeightBold;
+    }
+  }
+
+  .mf-spin-content {
+    display: inline-block;
+  }
+
+  .mf-spin-body__loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(245, 248, 251, 0.8);
+  }
+}
+
+.mf-theme__dark {
+  .mf-spin-body__loading {
+    background-color: rgba(@fontColorBlack, 0.9);
+  }
+}
+
+.spin-enter-active,
+.spin-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.spin-enter-from,
+.spin-leave-to {
+  opacity: 0;
+}

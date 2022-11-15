@@ -40,6 +40,11 @@ const router = createRouter({
           path: 'divider',
           name: 'divider',
           component: () => import('@/doc/Divider/index.vue')
+        },
+        {
+          path: 'spin',
+          name: 'spin',
+          component: () => import('@/doc/Spin/index.vue')
         }
       ]
     },

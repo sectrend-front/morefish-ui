@@ -27,7 +27,6 @@ if (props.path) {
 
 <style lang="less" scoped>
 .show-box {
-  width: 100%;
   padding: 5px;
   border: 1px solid black;
   .show-code-btn {
