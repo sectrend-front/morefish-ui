@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,7 +15,15 @@ export default defineConfig({
       '#i': resolve(__dirname, 'packages/icon')
     }
   },
-  plugins: [vue(), vueJsx({})],
+  plugins: [
+    vue(),
+    vueJsx({}),
+    dts({
+      outputDir: './dist/types',
+      insertTypesEntry: false, // 插入TS 入口
+      copyDtsFiles: true // 是否将源码里的 .d.ts 文件复制到 outputDir
+    })
+  ],
   server: {
     hmr: true,
     host: '0.0.0.0',
