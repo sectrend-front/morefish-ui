@@ -1,5 +1,5 @@
 import Tag from './Tag.vue'
-import { withInstall } from '#/utils/withInstall'
+import { withInstall } from '../../utils/withInstall'
 import { Name } from './const'
 
 Tag.name = Name

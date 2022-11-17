@@ -1,4 +1,4 @@
-import { extractPropsArr } from '#/utils/extractPropsArr'
+import { extractPropsArr } from '../../utils/extractPropsArr'
 
 const Types = extractPropsArr(['primary', 'success', 'info', 'warning', 'danger'])
 const Name = 'mf-button'

@@ -1,4 +1,4 @@
-import { isFragment } from '#/utils/vnode'
+import { isFragment } from '../../../utils/vnode'
 import { VNode } from 'vue'
 
 /** 清洗slot数据 */

@@ -42,7 +42,6 @@
     "git-commit": "zx script/commit.mjs",
     "test": "vitest",
     "test-coverage": "vitest run --coverage",
-    "publish": "npm publish",
     "update morefish": "pnpm remove morefish-ui&&pnpm add morefish-ui",
     "create-component": "zx script/create-component.mjs",
     "prepare": "husky install"

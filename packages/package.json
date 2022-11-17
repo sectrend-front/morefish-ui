@@ -16,19 +16,12 @@
     "vue3组件库"
   ],
   "exports": {
-    ".": {
-      "import": "./index.ts",
-      "types": "./morefish-ui.d.ts"
-    },
-    "./dist/style.css": {
-      "import": "./style/theme.less"
-    },
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    ".": "./index.ts"
   },
-  "files": [
-    "package.json",
-    "dist"
-  ],
+  "scripts": {
+    "publish": "npm publish"
+  },
   "dependencies": {
     "dayjs": "^1.11.4",
     "vue": "^3.2.37"

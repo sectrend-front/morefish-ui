@@ -1,4 +1,3 @@
-// import { extractPropsArr } from '#/utils/extractPropsArr'
 import { ExtractPropTypes } from 'vue'
 import { SpinSizes } from '../const'
 

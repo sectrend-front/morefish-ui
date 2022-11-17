@@ -32,7 +32,7 @@ const setStyle = () => {
 </template>
 
 <style lang="less" scoped>
-@import url(#/style/common.less);
+@import url(../../style/common.less);
 .mf-icon {
   .iconInit();
 }

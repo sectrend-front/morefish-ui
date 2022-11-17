@@ -1,6 +1,6 @@
 import Tabs from './Tabs'
 import TabPane from './TabPane'
-import { withInstall } from '#/utils/withInstall'
+import { withInstall } from '../../utils/withInstall'
 
 export const MfTabs = withInstall(Tabs, { TabPane })
 TabPane.install = () => {}

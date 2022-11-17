@@ -1,5 +1,5 @@
 import Button from './Button'
-import { withInstall } from '#/utils/withInstall'
+import { withInstall } from '../../utils/withInstall'
 
 const MfButton = withInstall(Button)
 

@@ -1,4 +1,4 @@
-import { extractPropsArr } from '#/utils/extractPropsArr'
+import { extractPropsArr } from '../../../utils/extractPropsArr'
 import { ExtractPropTypes } from 'vue'
 export const TagTypeArr = extractPropsArr(['primary', 'success', 'info', 'warning', 'danger'])
 export const TagSizeArr = extractPropsArr(['small', 'large'])

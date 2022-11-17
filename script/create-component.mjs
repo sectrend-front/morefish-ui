@@ -16,7 +16,7 @@ console.log('create success!')
 
 const fileList = {
   'index.ts': ` import ${name} from './${name}'
-                import { withInstall } from '#/utils/withInstall'
+                import { withInstall } from '../../utils/withInstall'
                                   
                 ${name}.name = 'mf-${name.toLowerCase()}'
                 export const Mf${name} = withInstall(${name})
@@ -28,7 +28,7 @@ const fileList = {
 
   'style/index.less': `.mf-${name.toLowerCase()}{}`,
 
-  'src/getProps.ts': `import { extractPropsArr } from '#/utils/extractPropsArr'
+  'src/getProps.ts': `import { extractPropsArr } from '../../../utils/extractPropsArr'
                       import { ExtractPropTypes } from 'vue'
 
                       export function getProps() {
