@@ -17,7 +17,8 @@ export default defineConfig({
   plugins: [vue(), vueJsx({})],
   server: {
     hmr: true,
-    host: '0.0.0.0'
+    host: '0.0.0.0',
+    port: 3000
   },
   preview: {
     port: 4174

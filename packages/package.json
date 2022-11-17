@@ -1,0 +1,40 @@
+{
+  "name": "morefish-ui",
+  "version": "0.0.7",
+  "type": "module",
+  "module": "./index.ts",
+  "description": "morefish-ui",
+  "keywords": [
+    "vue",
+    "vue3",
+    "vuejs",
+    "vite",
+    "morefish-ui",
+    "ui",
+    "vueui",
+    "vue组件库",
+    "vue3组件库"
+  ],
+  "exports": {
+    ".": {
+      "import": "./index.ts",
+      "types": "./morefish-ui.d.ts"
+    },
+    "./dist/style.css": {
+      "import": "./style/theme.less"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "package.json",
+    "dist"
+  ],
+  "dependencies": {
+    "dayjs": "^1.11.4",
+    "vue": "^3.2.37"
+  },
+  "homepage": "https://github.com/sectrend-front/morefish-ui",
+  "bugs": {
+    "email": "869135421@qq.com"
+  }
+}
